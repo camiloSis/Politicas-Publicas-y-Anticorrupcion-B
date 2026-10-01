@@ -1,0 +1,318 @@
+% ==========================================================
+%  main.tex  --  Manuscrito anonimizado (revisión doble ciega)
+%  Clase: sagej.cls (SAGE)   Compilar: pdflatex -> bibtex -> pdflatex x2
+%  Coloca sagej.cls y SageH.bst (de la plantilla SAGE) en esta carpeta.
+% ==========================================================
+\documentclass[Afour,sageh,times]{sagej}
+% Opciones: sageh = Harvard (autor-año); usa sagev si la revista requiere Vancouver.
+% Consulta siempre las normas de envío de la revista; prevalecen sobre la plantilla.
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{xurl}
+\usepackage[colorlinks,bookmarksopen,bookmarksnumbered,citecolor=black,urlcolor=black,linkcolor=black]{hyperref}
+
+% Marcador provisional (se muestra en rojo hasta que se reemplace)
+\newcommand{\relleno}[1]{\textcolor{red}{[#1]}}
+\renewcommand{\refname}{Referencias}
+
+\def\volumeyear{2026}
+
+\begin{document}
+
+\runninghead{Gobernanza y prevención de la corrupción en el Perú}
+
+% --- Mantener nombres y afiliaciones únicamente en portada.tex. ---
+\author{}  % Vacío intencionalmente para la revisión doble ciega
+\title{Gobernanza y prevención de la corrupción en el Perú: desafíos institucionales, políticas de integridad y mecanismos de control en la gestión pública}
+
+\begin{abstract}
+Corruption prevention in Peru is closely linked to governance quality, state institutional capacity, and the coordination of integrity policies and control mechanisms. This article presents a narrative documentary review examining these relationships in the Peruvian context through five selected documents: the OECD's \textit{Integrity Review of Peru} (2017), \textit{Justice Review of Peru} (2024), and \textit{Towards a National Integrity and Transparency System in Peru} (2024); Eloy Munive Pariona's proposal for a public integrity system (2022); and Peru's National Policy on Integrity and the Fight against Corruption (2017). The review proceeds from the premise that public integrity depends not only on rules or specialised institutions, but also on their ability to coordinate, implement policies, manage risks, ensure accountability, and activate control and sanction mechanisms. It proposes an analytical framework with three dimensions: institutional coordination and capacity; integrity and prevention policies; and control, accountability, and sanction mechanisms. This framework connects preventive action with the organisational capacities required for integrity policies to have practical effects in Peruvian public management.
+\end{abstract}
+
+\keywords{public governance, corruption prevention, public integrity, institutional capacity, control and accountability, Peru}
+
+\maketitle
+
+%% ----------------------------------------------------------
+\section{Introducción}
+\subsection{Contexto y justificación}
+La integridad pública es central para la calidad de la gobernanza porque condiciona la forma en que las instituciones ejercen sus funciones, administran recursos y responden a la ciudadanía. En el Perú, \citet{oecd2017integrity} sostiene que la integridad del sector público es importante para el desarrollo socioeconómico sostenido y que debe fortalecerse mediante una combinación de cultura de integridad, rendición de cuentas, control y aplicación efectiva de las normas. Su enfoque abarca los niveles nacional y subnacional e incluye ética pública, conflictos de intereses, protección de denunciantes, control interno, gestión de riesgos, sistemas disciplinarios y justicia penal.
+
+Esta perspectiva es especialmente relevante porque la prevención de la corrupción no puede reducirse a identificar y sancionar posteriormente las conductas indebidas. La Política Nacional de Integridad y Lucha contra la Corrupción del Perú se organiza en torno a tres ejes: capacidad preventiva del Estado; identificación y gestión de riesgos; y capacidad sancionadora del Estado. Así, la política conecta prevención, gestión institucional y sanción como componentes de una misma respuesta estatal (\citealp{pcm2017politica}).
+
+La evolución institucional posterior refuerza este problema. La revisión de la OCDE de 2024 informa que el Perú ha creado organismos especializados, desarrollado un Modelo de Integridad e incorporado Oficinas de Integridad Institucional y funcionarios responsables del acceso a la información. Sin embargo, esta arquitectura no garantiza por sí sola resultados homogéneos. La revisión identifica dificultades de coordinación interinstitucional, ambigüedad en las responsabilidades y limitaciones de recursos y apoyo institucional para implementar políticas de integridad y transparencia (\citealp{oecd2024sistema}).
+
+Por tanto, estudiar la corrupción desde una perspectiva de gobernanza requiere examinar no solo las normas existentes, sino también las capacidades estatales necesarias para aplicarlas y coordinarlas. Esta relación ayuda a explicar por qué la prevención de la corrupción depende de instituciones capaces de actuar conjuntamente, gestionar riesgos y sostener mecanismos de control y rendición de cuentas (\citealp{oecd2017integrity,oecd2024sistema}).
+
+\subsection{Vacío en la literatura}
+La literatura seleccionada ofrece perspectivas diferenciadas sobre integridad, prevención, control, justicia y coordinación institucional en el Perú. La revisión de la OCDE de 2017 analiza el sistema de integridad y sus principales componentes de control y cumplimiento; la Política Nacional de Integridad y Lucha contra la Corrupción establece objetivos y ejes de política pública; y una propuesta académica plantea un Sistema Nacional de Integridad orientado a fortalecer la capacidad preventiva del Estado (\citealp{oecd2017integrity,pcm2017politica,munive2022integridad}).
+
+La revisión de justicia de la OCDE también muestra que los problemas de coordinación y la fragmentación institucional afectan el funcionamiento del sistema de justicia peruano. Identifica enfoques compartimentados, duplicidad de funciones y dificultades para coordinar responsabilidades entre instituciones. Sostiene que la implementación de reformas depende de una estructura institucional que permita coordinar, planificar y supervisar las acciones de manera sistémica (\citealp{oecd2024justice}).
+
+El vacío que aborda este artículo no consiste en la ausencia de estudios sobre corrupción o integridad en el Perú. Más bien, reúne tres dimensiones estrechamente relacionadas que requieren un análisis conjunto: capacidades institucionales y mecanismos de coordinación; políticas de integridad y prevención; y mecanismos de control, rendición de cuentas y sanción. Esta perspectiva integrada supera una visión fragmentada de instrumentos y organismos, y considera la prevención de la corrupción como una función sistémica de la gobernanza pública peruana.
+
+\subsection{Objetivo y pregunta de investigación}
+El objetivo general es analizar, mediante una revisión documental narrativa, la relación entre gobernanza, integridad pública, capacidad institucional, políticas de prevención y mecanismos de control frente a la corrupción en el Perú.
+
+De manera específica, el artículo examina los desafíos institucionales asociados con la coordinación y las capacidades estatales; identifica los principales componentes de las políticas peruanas de integridad y prevención; analiza el papel del control, la rendición de cuentas y la sanción; y propone un marco analítico que relaciona estas dimensiones desde una perspectiva de gobernanza pública.
+
+La revisión se guía por la siguiente pregunta de investigación: \textbf{¿Cómo se articulan la coordinación y las capacidades institucionales, las políticas de integridad y prevención, y los mecanismos de control, rendición de cuentas y sanción en la prevención de la corrupción en la gestión pública peruana?}
+
+\subsection{Contribución y estructura del artículo}
+La contribución del artículo consiste en organizar las fuentes seleccionadas desde una perspectiva integradora de gobernanza e integridad pública. En lugar de considerar la prevención, el control y la sanción como ámbitos independientes, los analiza como componentes interdependientes de la capacidad institucional necesaria para prevenir y responder a los riesgos de corrupción. Este enfoque es consistente con la propuesta de un sistema organizado en niveles estratégico, táctico y operativo, y con la propuesta de fortalecer la rectoría del sistema y la coordinación horizontal y vertical (\citealp{munive2022integridad,oecd2024sistema}).
+
+El artículo se organiza en tres grandes partes. Primero, desarrolla la revisión de la literatura y el marco analítico. Segundo, presenta la metodología de revisión documental. Finalmente, presenta los hallazgos y la discusión derivados del análisis de las fuentes.
+
+%% ----------------------------------------------------------
+\section{Revisión de la literatura y marco analítico}
+\subsection{Corrupción, gobernanza e integridad pública}
+Las fuentes revisadas abordan la corrupción desde una perspectiva institucional y la relacionan con la capacidad del Estado para salvaguardar la integridad en el ejercicio de las funciones públicas. La integridad pública supone orientar la actuación institucional y la conducta de los servidores públicos por principios y valores compatibles con la protección del interés público, y respaldarlas con mecanismos que reduzcan las oportunidades de comportamientos contrarios a la ética. \citet{oecd2017integrity} vincula explícitamente integridad, gobernanza, control y gestión de riesgos, mientras que \citet{munive2022integridad} considera la integridad un componente fundamental de la prevención de la corrupción.
+
+La relación con la gobernanza surge de la necesidad de implementar estas políticas de manera coordinada dentro de un sistema institucional. \citet{munive2022integridad} propone una estructura con niveles estratégico, táctico y operativo que incorpora actores estatales y no estatales. Por su parte, la revisión de la OCDE de 2024 sostiene que la arquitectura institucional debe facilitar la articulación entre las distintas entidades y niveles de gobierno, en lugar de limitar la integridad y la transparencia a mecanismos formales de cumplimiento (\citealp{oecd2024sistema}).
+
+\subsection{Desafíos institucionales en la gestión pública peruana}
+La coordinación es un desafío central. La existencia de múltiples entidades, funciones y mecanismos exige responsabilidades claras, canales de cooperación y capacidades de dirección y seguimiento. La revisión de la OCDE de 2024 identifica problemas de coordinación entre las entidades responsables de integridad y transparencia, así como ambigüedad en las responsabilidades y limitaciones de recursos y apoyo administrativo (\citealp{oecd2024sistema}).
+
+La capacidad institucional es un segundo aspecto. Las políticas de integridad deben adaptarse a distintas realidades organizacionales y territoriales. La revisión de la OCDE de 2024 señala que trasladar los estándares de integridad y transparencia a entidades de diferentes tamaños, funciones y capacidades constituye un desafío para implementar las políticas de manera coherente (\citealp{oecd2024sistema}).
+
+Un tercer desafío corresponde a la relación entre control y gestión. La revisión de integridad de la OCDE sobre el Perú señala que el control interno y la gestión de riesgos pueden tratarse como rutinas administrativas aisladas e integrarse de manera insuficiente en los procesos de gestión. Por ello, la capacidad preventiva depende de que los responsables de la administración incorporen la gestión de riesgos y el control en las decisiones y procesos institucionales (\citealp{oecd2017integrity}).
+
+\subsection{Políticas de integridad y anticorrupción}
+La Política Nacional de Integridad y Lucha contra la Corrupción del Perú es el principal referente de política pública seleccionado para esta revisión. Se estructura en torno a tres ejes: capacidad preventiva; identificación y gestión de riesgos; y capacidad sancionadora. El primero comprende transparencia, gestión de la información, cultura de integridad y gestión de conflictos de intereses; el segundo abarca supervisión e identificación y gestión de riesgos; y el tercero busca fortalecer la capacidad estatal para investigar, perseguir y sancionar la corrupción (\citealp{pcm2017politica}).
+
+\citet{munive2022integridad} amplía esta perspectiva al proponer un Sistema Nacional de Integridad capaz de articular actores públicos y privados en distintos niveles de intervención. Esta lógica sistémica conecta la formulación de políticas con su implementación institucional y busca fortalecer la capacidad preventiva de las entidades públicas.
+
+\citet{oecd2024sistema} retoma esta problemática y propone una mayor coherencia institucional mediante un Sistema Nacional de Integridad y Transparencia, una rectoría fortalecida y mecanismos de coordinación interinstitucional. Este planteamiento muestra que una política de integridad requiere no solo instrumentos, sino también una arquitectura que defina cómo se relacionan los actores responsables de su aplicación.
+
+\subsection{Mecanismos de prevención y control}
+Los mecanismos de prevención incluyen transparencia, gestión de conflictos de intereses, identificación de riesgos, sistemas de denuncia, integridad organizacional y control interno. Estos instrumentos buscan actuar antes de que las prácticas corruptas se materialicen o consoliden. En particular, la Política Nacional vincula la identificación y gestión de riesgos con mecanismos permanentes de supervisión, mientras que la revisión de la OCDE de 2017 relaciona el control interno con la gestión institucional de riesgos (\citealp{pcm2017politica,oecd2017integrity}).
+
+Los mecanismos de control también deben relacionarse con la rendición de cuentas y la asignación de responsabilidades. La Política Nacional incorpora explícitamente la capacidad sancionadora como uno de sus ejes, mientras que la revisión de la OCDE de 2017 considera los sistemas disciplinarios y el papel de la justicia penal. En el ámbito de la justicia, la revisión de la OCDE de 2024 subraya que la coordinación institucional, la claridad de responsabilidades y la capacidad de implementación son condiciones pertinentes para que los mecanismos de control funcionen eficazmente (\citealp{pcm2017politica,oecd2017integrity,oecd2024justice}).
+
+\subsection{Marco analítico}
+La revisión propone un marco analítico compuesto por tres dimensiones interrelacionadas.
+
+\textbf{Primera dimensión: coordinación y capacidades institucionales.} Comprende la claridad de competencias, la coordinación horizontal y vertical, los recursos disponibles, la profesionalización, la capacidad de implementación y la existencia de una entidad rectora capaz de orientar y supervisar la política de integridad. Esta dimensión permite evaluar las condiciones institucionales necesarias para ejecutar las políticas de manera coherente (\citealp{oecd2024sistema,munive2022integridad}).
+
+\textbf{Segunda dimensión: políticas de integridad y prevención.} Incluye transparencia, ética pública, gestión de conflictos de intereses, gestión de riesgos, cultura organizacional, sistemas de integridad y mecanismos de denuncia. Su función analítica es identificar cómo las instituciones buscan reducir riesgos y fortalecer conductas compatibles con el interés público (\citealp{pcm2017politica,oecd2017integrity}).
+
+\textbf{Tercera dimensión: control, rendición de cuentas y sanción.} Comprende control interno, supervisión, rendición de cuentas, sistemas disciplinarios, investigación y sanción. Permite analizar la capacidad del sistema para detectar incumplimientos, establecer responsabilidades y evitar que los controles funcionen únicamente como procedimientos formales (\citealp{oecd2017integrity,pcm2017politica}).
+
+El marco supone una relación secuencial y circular: las capacidades institucionales permiten implementar políticas preventivas; estas políticas reducen y gestionan riesgos; y los mecanismos de control y sanción generan retroalimentación para corregir debilidades institucionales. En conjunto, las tres dimensiones permiten estudiar la prevención de la corrupción como una función integral de la gobernanza pública.
+
+%% ----------------------------------------------------------
+\section{Metodología}
+\subsection{Diseño de investigación}
+El estudio se plantea como una revisión documental narrativa, con enfoque cualitativo y orientación analítica. El corpus está constituido exclusivamente por cinco documentos definidos de antemano por el investigador: tres publicaciones de la OCDE, un artículo académico que propone un Sistema Nacional de Integridad y la Política Nacional de Integridad y Lucha contra la Corrupción de la Presidencia del Consejo de Ministros del Perú (\citealp{oecd2017integrity,oecd2024justice,oecd2024sistema,munive2022integridad,pcm2017politica}). El propósito no es estimar estadísticamente la corrupción, sino integrar conceptualmente los principales planteamientos sobre gobernanza, integridad, prevención y control en el Perú.
+
+\subsection{Fuentes y estrategia de búsqueda}
+Las fuentes corresponden a documentos institucionales y académicos directamente relacionados con integridad pública, gobernanza, justicia y lucha contra la corrupción en el Perú. La estrategia de búsqueda propuesta consiste en localizar y verificar los documentos a partir de sus títulos, autores institucionales o personales y años de publicación, utilizando preferentemente los repositorios oficiales de la OCDE, la Presidencia del Consejo de Ministros y la publicación académica correspondiente.
+
+No se proporcionaron bases de datos bibliográficas, cadenas de búsqueda ni fechas específicas de búsqueda. El investigador debe verificar estos datos antes de presentar la versión metodológica definitiva.
+
+\subsection{Criterios de inclusión y exclusión}
+Los criterios de inclusión son: documentos limitados a las cinco fuentes definidas; textos centrados en el Perú; publicaciones relacionadas directamente con gobernanza, integridad pública, prevención de la corrupción, capacidades institucionales, control o sanción; y documentos con contenido suficiente para identificar conceptos, propuestas institucionales o mecanismos de política pública.
+
+Se excluyen fuentes adicionales, estudios comparativos ajenos al corpus definido, estadísticas externas, otros artículos académicos y documentos cuya atención principal recaiga en otros países o ámbitos no relacionados con la gestión pública peruana. Estos criterios mantienen la revisión dentro del alcance documental establecido.
+
+\subsection{Procedimiento de análisis}
+El análisis propuesto comprende cuatro etapas. Primero, se identifican los conceptos y argumentos centrales de cada fuente. Segundo, se organiza el material según tres dimensiones: coordinación y capacidades institucionales; políticas de integridad y prevención; y mecanismos de control, rendición de cuentas y sanción. Tercero, se contrastan las coincidencias y diferencias entre los documentos para establecer relaciones conceptuales entre las dimensiones. Finalmente, se elabora una síntesis interpretativa guiada por la pregunta de investigación y el marco analítico.
+
+El procedimiento busca evitar una mera descripción individual de las fuentes y, en cambio, establecer conexiones entre arquitectura institucional, prevención y control. No se proporcionaron una matriz de extracción, un protocolo de codificación ni un procedimiento de doble revisión. El investigador debe verificar estos elementos e incorporarlos a la metodología definitiva cuando corresponda.
+
+\subsection{Limitaciones}
+La primera limitación deriva del tamaño y la composición del corpus documental, deliberadamente restringido a cinco fuentes. Por ello, la revisión no pretende representar toda la producción académica sobre corrupción e integridad en el Perú.
+
+La segunda limitación se relaciona con el diseño narrativo, que prioriza la integración conceptual por encima de la medición cuantitativa de resultados. Por tanto, las relaciones planteadas en el marco analítico deben entenderse como categorías de interpretación y no como relaciones causales demostradas estadísticamente.
+
+Finalmente, la falta de información sobre las bases de datos consultadas, las fechas y los términos de búsqueda y los procedimientos formales de selección impide afirmar que se aplicó una estrategia bibliométrica o una revisión sistemática. El investigador debe completar y verificar estos datos antes de presentar el artículo definitivo.
+
+%% ----------------------------------------------------------
+\section{Hallazgos}
+\label{sec:hallazgos}
+
+Los hallazgos que siguen son una síntesis temática de documentos oficiales, no los resultados de una investigación empírica propia. El corpus analizado en esta sección combina un instrumento de planificación (\citealp{pcm2018plan}), una norma operativa de implementación (\citealp{pcm2026directiva}) y un documento de política elaborado desde el control gubernamental (\citealp{contraloria2020corrupcion}). Los dos primeros establecen lo que las instituciones deben hacer; el tercero aproxima lo que el control halló en la práctica. Además, cubren momentos distintos (2018, 2020 con datos de 2017–2019, y 2026), por lo que no describen un mismo estado de cosas.
+
+\subsection{Responsabilidades institucionales y coordinación}
+\label{subsec:responsabilidades}
+
+El punto de partida compartido es que ninguna institución puede enfrentar la corrupción por sí sola. El Plan Nacional de Integridad y Lucha contra la Corrupción 2018–2021 plantea articular prevención, detección, investigación y sanción, e involucrar tanto a las entidades con mandato legal en la materia como al conjunto de las entidades públicas (\citealp{pcm2018plan}). En el primer grupo ubica al Poder Judicial, el Ministerio Público, la Contraloría, el Consejo Nacional de la Magistratura, la Policía Nacional y la Procuraduría Especializada en Delitos de Corrupción. En el segundo, a todas las entidades, que deben incorporar en sus procesos modelos de prevención, transparencia, rendición de cuentas y control (\citealp{pcm2018plan}). La responsabilidad es, entonces, doble: sistémica y organizacional.
+
+La Contraloría expresa una idea similar con la noción de «ecosistema de control». Las competencias están repartidas por un criterio de pesos y contrapesos, y el control interno, el control externo, la investigación fiscal, la reparación civil a cargo de las procuradurías, la sanción judicial y el control social operan como eslabones de una misma cadena (\citealp{contraloria2020corrupcion}). La coordinación importa porque el producto de un eslabón es el insumo del siguiente: los informes de auditoría alimentan la teoría del caso de los fiscales, y las procuradurías canalizan el resarcimiento (\citealp{contraloria2020corrupcion}). Si una articulación falla, el esfuerzo de las demás pierde efecto.
+
+La Directiva de 2026 concreta esta distribución dentro de cada entidad. La Secretaría de Integridad Pública emite lineamientos y brinda asistencia y opinión técnica; el titular ejerce liderazgo ético, aprueba el Programa de Integridad y dispone medidas para cerrar brechas; la máxima autoridad administrativa incorpora la función de integridad y asegura sus condiciones; la unidad de integridad conduce, monitorea y reporta; y las demás unidades ejecutan lo que les corresponde (\citealp{pcm2026directiva}). La coordinación se prevé en tres planos: vertical (relación técnico-funcional con la Secretaría, sin alterar la dependencia jerárquica), interno (planeamiento, recursos humanos, comunicaciones) y horizontal (una «red de integridad» sin decisiones vinculantes) (\citealp{pcm2026directiva}).
+
+Cabe notar un desplazamiento: el Plan de 2018 propone un sistema funcional de integridad bajo la rectoría de la Comisión de Alto Nivel Anticorrupción, mientras que la Directiva reconoce a la Secretaría de Integridad Pública como órgano rector (\citealp{pcm2018plan,pcm2026directiva}). Los documentos no explican ese tránsito, de modo que no es posible valorar su efecto sobre la coordinación.
+
+\subsection{Políticas de integridad e implementación}
+\label{subsec:politicas-implementacion}
+
+La Directiva traduce el Modelo de Integridad en tres procesos (planificación, desarrollo de componentes, seguimiento y evaluación) y nueve componentes, entre ellos el compromiso de la Alta Dirección, la gestión de riesgos, las políticas de integridad, la transparencia y rendición de cuentas, el canal de denuncia y el encargado del Modelo (\citealp{pcm2026directiva}). Varias piezas guardan correspondencia temática con acciones del Plan de 2018, como las oficinas de integridad, la metodología de riesgos, los registros de visitas y agendas o el mecanismo integrado de denuncias (\citealp{pcm2018plan}), aunque los documentos no afirman esa filiación.
+
+El liderazgo se vuelve verificable: el titular suscribe un Compromiso de Integridad Institucional que se publica y se renueva al cambiar la autoridad, la integridad se incorpora como acción estratégica en los planes y la unidad de integridad recibe recursos vía el plan operativo (\citealp{pcm2026directiva}). Sin embargo, su participación en decisiones estratégicas ocurre «cuando corresponda» y a solicitud de la Alta Dirección (\citealp{pcm2026directiva}), es decir, depende de la iniciativa de quien debe ser asesorado.
+
+La función de integridad puede ejercerse mediante una oficina o unidad especializada, directamente por la máxima autoridad administrativa o por delegación en recursos humanos o administración. La norma prioriza la unidad exclusiva, pero admite que en los otros dos supuestos la función sea una actividad adicional a las preexistentes; prevé además estándares de idoneidad y certificación de competencias (\citealp{pcm2026directiva}). La gestión de riesgos sigue un ciclo de identificación, análisis, valoración, tratamiento y seguimiento, con roles conductor, técnico y consultivo, y exige un protocolo de comunicación de crisis para los riesgos valorados como muy altos. Los procesos se seleccionan periódicamente, no todos a la vez (\citealp{pcm2026directiva}).
+
+En códigos de ética, conflictos de intereses, transparencia y rendición de cuentas, la Directiva opera más como sistema de verificación que como fuente de nuevas reglas. La unidad de integridad mantiene el listado de normas obligatorias (debida diligencia, obsequios, uso de bienes, desempeño ético, gestión de intereses, conflictos de intereses) y verifica el uso de plataformas como el Registro de Visitas en Línea, las agendas oficiales, la Plataforma de Debida Diligencia y el Portal de Transparencia Estándar. También contempla el acceso a la información, los datos abiertos, las audiencias públicas de rendición de cuentas (con énfasis en gobiernos regionales y locales) y las veedurías (\citealp{pcm2026directiva}). El texto no establece como tarea específica aprobar códigos de ética institucionales; la Ley del Código de Ética figura solo como base normativa. En todos los casos la unidad verifica y recomienda; ejecutan las unidades responsables.
+
+\subsection{Mecanismos de prevención y control}
+\label{subsec:mecanismos-prevencion-control}
+
+Los documentos permiten distinguir cuatro funciones, aunque ninguno las ordena con la misma taxonomía. La prevención reduce la probabilidad de que los hechos ocurran (riesgos, control interno, transparencia, capacitación). La detección identifica hechos ocurridos o en curso (servicios de control, denuncias). El control verifica legalidad y uso de recursos en distintos momentos (previo, simultáneo, posterior). La sanción atribuye responsabilidad administrativa, civil o penal. Las fronteras son porosas: el Plan organiza sus ejes en torno a prevención, gestión de riesgos y capacidad sancionadora (\citealp{pcm2018plan}), y la Directiva admite tratamientos de riesgo preventivos, de mitigación o de detección (\citealp{pcm2026directiva}).
+
+El control interno aparece como base preventiva. El Plan lo considera necesario para que las entidades consoliden las herramientas de integridad (\citealp{pcm2018plan}), y la Directiva asigna a la unidad de integridad un rol de apoyo al seguimiento del Sistema de Control Interno y de las recomendaciones de control. Ante situaciones adversas del control simultáneo, sigue los plazos de acciones preventivas o correctivas «sin asumir» funciones del Sistema Nacional de Control (\citealp{pcm2026directiva}). La Contraloría presenta el control concurrente, las visitas de control y la orientación de oficio como modalidades que alertan riesgos para actuar a tiempo; concentraron la mayor parte de los más de 25 mil servicios de control de 2019, en el marco de la reforma iniciada con la Ley N.° 30742 (\citealp{contraloria2020corrupcion}).
+
+El control posterior cumple una función de detección y atribución de responsabilidades. En 2019, 1407 servicios de cumplimiento y control específico comprendieron a 8081 funcionarios con indicios de responsabilidad administrativa, civil o penal (\citealp{contraloria2020corrupcion}). Con esa base, el documento estima por extrapolación que alrededor del 15 \% del presupuesto ejecutado ese año (cerca de 23.3 mil millones de soles) se habría perdido por corrupción e inconducta funcional, con mayor incidencia en inversiones y en los sectores de transportes, salud y educación (\citealp{contraloria2020corrupcion}). Es una aproximación exploratoria que descansa en supuestos explícitos (representatividad de lo examinado y capacidad de detección constante) y que el propio texto considera un piso. Su utilidad es orientar la priorización de riesgos, en línea con las áreas que el Plan definió como prioritarias: infraestructura, contrataciones, captura de la política pública y provisión de servicios (\citealp{pcm2018plan}).
+
+Las denuncias unen detección y sanción. El Plan propone un mecanismo integrado que proteja al denunciante (\citealp{pcm2018plan}). La Directiva dispone que la unidad de integridad verifique la admisibilidad, derive los casos a la secretaría técnica disciplinaria, al órgano de control institucional o a la procuraduría, resguarde la identidad, evalúe medidas de protección y sistematice información agregada, incluidas las denuncias que concluyeron en sanción disciplinaria o penal (\citealp{pcm2026directiva}).
+
+La sanción queda en gran parte fuera de la unidad de integridad. El Plan reserva al tercer eje la justicia penal, el régimen disciplinario, el Sistema Nacional de Control y la recuperación de activos (\citealp{pcm2018plan}). La Contraloría indica que, tras una sentencia del Tribunal Constitucional de 2019, no tenía activa su capacidad sancionadora administrativa y derivaba los casos al procedimiento disciplinario de cada entidad, vía que calificaba de poco factible. Añade que el 85 \% de las responsabilidades penales imputadas se concentró en negociación incompatible, colusión y peculado (\citealp{contraloria2020corrupcion}). Las fuentes del corpus no permiten verificar si esa situación normativa cambió después.
+
+\subsection{Limitaciones identificadas y brechas institucionales}
+\label{subsec:limitaciones-brechas}
+
+\subsubsection*{Implementación desigual}
+La Directiva es obligatoria solo para entidades que cumplen ciertos criterios (competencia para contratar, sancionar y despedir; oficina de recursos humanos y titular; documento de gestión como ROF o MOP), y la modalidad de la función de integridad se elige según naturaleza, tamaño, presupuesto y personal disponible (\citealp{pcm2026directiva}). Esa flexibilidad responde al principio de adaptabilidad, pero implica niveles de especialización distintos entre entidades. El Plan ya registraba que gobiernos subnacionales carecían de portal web o de Portal de Transparencia Estándar por limitaciones presupuestarias o de capacitación (\citealp{pcm2018plan}), y la Contraloría halló variaciones por nivel de gobierno, sector, tipo de gasto y región (\citealp{contraloria2020corrupcion}).
+
+\subsubsection*{Capacidades limitadas}
+Varias acciones del Plan presuponen carencias: recursos humanos y presupuesto suficientes para la Comisión de Alto Nivel, recursos para las procuradurías, mayor autonomía y descentralización de los órganos de control institucional (\citealp{pcm2018plan}). La Directiva sujeta la programación de recursos de la unidad de integridad a la disponibilidad presupuestal y deja la evaluación externa a la Secretaría «de acuerdo con la capacidad operativa que disponga» (\citealp{pcm2026directiva}).
+
+\subsubsection*{Fragmentación y coordinación}
+El Plan recuerda que desde 2001 se crearon instancias anticorrupción con composición y enfoques distintos, algunas de vocación temporal o desactivadas, y que la Oficina Nacional Anticorrupción colisionó con funciones de la Contraloría y del Ministerio Público; añade que integridad y anticorrupción se usan de manera indistinta (\citealp{pcm2018plan}). Entre sus acciones figuran delimitar jurisdicciones, contar con un inventario único de infracciones y sanciones, clarificar funciones en ética y conflictos de intereses, y establecer protocolos de coordinación en la investigación penal, lo que muestra que la superposición se reconocía como problema. La Directiva aborda la coordinación sobre todo dentro de cada entidad; la red de integridad no genera decisiones vinculantes (\citealp{pcm2026directiva}).
+
+\subsubsection*{Debilidades del control}
+La Contraloría identifica límites del control posterior: cuando los hechos ya ocurrieron, es difícil verificar la cantidad de bienes recibidos o la prestación efectiva de un servicio, y en las obras abundan gastos imperceptibles sin juicio experto. Menciona además una brecha entre la complejidad de los procedimientos de contratación y la implementación de controles, y que el control es selectivo frente a más de 24 millones de operaciones transaccionales anuales (\citealp{contraloria2020corrupcion}).
+
+\subsubsection*{Distancia entre norma y práctica}
+El Plan sostiene que medidas previas (transparencia, gestión de intereses, prohibiciones e incompatibilidades, servicio civil) no tuvieron el impacto estructural esperado, y que las recomendaciones de la Comisión Presidencial de Integridad no se incorporaron por mandato expreso en los documentos de planeamiento de las entidades. En varias acciones del eje preventivo las metas se formulan sin línea de base (\citealp{pcm2018plan}). La Directiva descansa en medios de verificación y reportes internos. Las fuentes no ofrecen datos sobre el grado real de implementación, sobre los resultados del Plan 2018–2021 ni sobre el efecto de estas medidas en la reducción de la corrupción; los datos de la Contraloría llegan solo hasta 2019. Toda conclusión sobre efectividad carece, por tanto, de sustento en este corpus.
+
+%% ----------------------------------------------------------
+\section{Discusión}
+\label{sec:discusion}
+
+\subsection{Hallazgos en relación con la literatura y el marco analítico}
+\label{subsec:hallazgos-literatura}
+
+El análisis de las fuentes revisadas permite sostener que la prevención de la corrupción en el Perú no depende exclusivamente de la existencia de normas, entidades de control o políticas específicas. El problema central se encuentra en la capacidad del Estado para articular esas herramientas, implementarlas de manera homogénea y convertirlas en prácticas institucionales sostenibles. En este sentido, los hallazgos se relacionan con las tres dimensiones del marco analítico propuesto: coordinación y capacidades institucionales; políticas de integridad y prevención; y mecanismos de control, rendición de cuentas y sanción.
+
+\subsubsection{Coordinación y capacidades institucionales}
+
+La primera dimensión muestra que el sistema peruano de integridad presenta una importante complejidad institucional. Existen diversas entidades con competencias vinculadas con la prevención, detección, investigación, control y sanción de actos de corrupción. Sin embargo, la multiplicidad de actores no garantiza por sí misma una respuesta estatal coherente. La OECD advierte que la configuración institucional constituye una condición necesaria, pero insuficiente, para producir impactos concretos en materia de integridad pública (\citealp{oecd2024sistema}).
+
+Esta observación coincide con el diagnóstico de la OECD sobre el sistema de integridad peruano, que identifica la necesidad de fortalecer la coordinación entre los niveles central y subnacional de gobierno, así como de consolidar responsabilidades institucionales más claras (\citealp{oecd2017integrity}). El problema, por tanto, no consiste únicamente en la ausencia de instituciones, sino en la existencia de posibles superposiciones, dificultades de articulación y diferencias en las capacidades disponibles para aplicar las políticas.
+
+Desde el marco analítico, esto significa que la coordinación debe ser entendida como una capacidad estatal transversal. No se limita al intercambio de información entre organismos, sino que comprende la definición de objetivos comunes, la distribución clara de responsabilidades, la interoperabilidad de sistemas y el seguimiento conjunto de resultados. Cuando estos elementos no están suficientemente desarrollados, las políticas de integridad pueden permanecer fragmentadas y depender excesivamente de la voluntad de las autoridades de turno.
+
+La propuesta de establecer un Sistema Nacional de Integridad y Transparencia responde precisamente a esta dificultad. La OECD plantea la necesidad de definir la naturaleza jurídica del sistema, establecer una autoridad rectora y reformar los mecanismos de coordinación interinstitucional para mejorar la coherencia de las políticas (\citealp{oecd2024sistema}). Esta propuesta revela una tensión importante: el Estado peruano cuenta con instrumentos y actores especializados, pero aún requiere una arquitectura institucional que permita integrarlos de manera más eficaz.
+
+La situación resulta especialmente relevante en los gobiernos regionales y locales. Las diferencias en recursos, profesionalización, estabilidad del personal y experiencia técnica pueden generar una implementación desigual de las políticas de integridad. El estudio de \citet{integridadmunicipal2025}, centrado en tres gobiernos locales, muestra la importancia de analizar la aplicación concreta del Modelo de Integridad en el ámbito municipal. Sin embargo, sus resultados no deben generalizarse automáticamente a todas las municipalidades del país. Su principal aporte consiste en mostrar que la implementación local requiere capacidades organizacionales específicas y no puede depender únicamente de la aprobación formal de una política nacional.
+
+\subsubsection{Políticas de integridad y prevención}
+
+La segunda dimensión se relaciona con la transición desde un enfoque predominantemente reactivo hacia uno preventivo. La Política Nacional de Integridad y Lucha contra la Corrupción y el Modelo de Integridad representan un intento de incorporar la prevención de riesgos, la ética pública, la transparencia y la responsabilidad institucional dentro de la gestión ordinaria del Estado.
+
+\citet{penamancillas2022integridad} plantea que la integridad pública debe ser entendida como un componente de la gobernanza y no como una actividad aislada o secundaria. Esta perspectiva permite superar la idea de que la lucha contra la corrupción se limita a investigar y sancionar conductas ilícitas. Desde una visión más amplia, la integridad implica orientar las decisiones públicas hacia el interés general, reducir los espacios de discrecionalidad indebida y crear condiciones organizacionales que desincentiven las prácticas corruptas.
+
+La literatura institucional revisada coincide con esta orientación. La OECD destaca que las políticas de integridad deben incorporarse en los procesos de gestión pública, en la toma de decisiones y en los sistemas de control interno (\citealp{oecd2017integrity}). No obstante, también advierte que el diseño formal de políticas no garantiza su aplicación efectiva. Una política puede contar con objetivos, componentes y lineamientos claros, pero producir resultados limitados si las entidades no disponen de recursos, liderazgo, personal capacitado o mecanismos de seguimiento.
+
+Esta diferencia entre diseño e implementación constituye una de las principales tensiones identificadas. El Modelo de Integridad ofrece una estructura preventiva, pero su aplicación puede variar según la entidad, el nivel de gobierno y el compromiso de la alta dirección. La existencia de una oficina, comisión o responsable de integridad no demuestra por sí misma que la cultura institucional haya cambiado. Para que la política sea efectiva, debe influir en la planificación, las contrataciones, la gestión de recursos humanos, la identificación de riesgos y la evaluación del desempeño.
+
+El caso municipal analizado por \citet{integridadmunicipal2025} resulta útil para comprender esta dificultad. Los gobiernos locales enfrentan desafíos particulares, como limitaciones presupuestarias, rotación de funcionarios, capacidades técnicas desiguales y una relación directa con intereses políticos y sociales territoriales. En consecuencia, la implementación del Modelo de Integridad requiere adaptaciones institucionales, asistencia técnica y mecanismos de acompañamiento, sin perder los estándares nacionales.
+
+En este punto, la prevención no debe confundirse con una simple acumulación de documentos. La aprobación de códigos de conducta, planes anticorrupción o mapas de riesgos es relevante, pero su valor depende de que estos instrumentos sean utilizados para modificar procesos concretos. La prevención adquiere sentido cuando permite identificar riesgos antes de que se produzca un perjuicio, establecer responsables, aplicar medidas correctivas y verificar su cumplimiento.
+
+\subsubsection{Control, rendición de cuentas y sanción}
+
+La tercera dimensión corresponde a los mecanismos de control, rendición de cuentas y sanción. El estudio de la Contraloría General de la República muestra que la corrupción y la inconducta funcional generan perjuicios significativos para el Estado y afectan la eficiencia del gasto público (\citealp{contraloria2020corrupcion}). La propia metodología del estudio debe interpretarse con cautela, pues se trata de una aproximación basada en resultados de servicios de control y no de una medición absoluta de todos los actos de corrupción existentes.
+
+Aun con esa limitación, la investigación aporta una evidencia importante: los mecanismos de control posterior identifican daños ya producidos, pero no siempre permiten evitar que el perjuicio ocurra. Esta situación refuerza la necesidad de combinar el control posterior con mecanismos preventivos y concurrentes. El control no debe funcionar únicamente como una herramienta de detección y sanción, sino también como un sistema de alerta temprana.
+
+Desde el marco analítico, esto significa que la rendición de cuentas debe vincular tres momentos: prevención, detección y respuesta. La prevención busca reducir los riesgos; la detección identifica irregularidades; y la respuesta comprende la corrección, la recuperación del daño y, cuando corresponda, la sanción. Si uno de estos componentes falla, la política anticorrupción pierde eficacia.
+
+La OECD también señala la necesidad de mejorar la coordinación entre las instituciones de integridad, control, justicia y sanción (\citealp{oecd2017integrity,oecd2024sistema}). Una entidad puede identificar un riesgo o una irregularidad, pero la respuesta estatal requiere que la información sea transmitida oportunamente, que se determinen responsabilidades y que las decisiones posteriores sean transparentes. De lo contrario, el control puede producir informes sin consecuencias suficientes sobre la conducta institucional.
+
+Por ello, la lucha contra la corrupción no debe evaluarse solamente por el número de controles realizados o sanciones impuestas. También es necesario examinar si las entidades corrigen sus procesos, reducen la repetición de irregularidades, protegen a quienes denuncian y utilizan la información del control para mejorar la gestión.
+
+\subsection{Implicaciones para las políticas públicas y la gestión pública}
+\label{subsec:implicaciones}
+
+Los hallazgos tienen varias implicaciones para las políticas públicas y la administración estatal. La primera es la necesidad de fortalecer la rectoría y la coordinación del sistema de integridad. La propuesta de la OECD de crear o consolidar una autoridad nacional con capacidad rectora apunta a resolver la fragmentación institucional y a establecer estándares comunes para las entidades públicas (\citealp{oecd2024sistema}).
+
+Sin embargo, fortalecer la rectoría no debe significar concentrar todas las funciones en una sola institución. Es necesario definir con claridad qué corresponde a la autoridad rectora, qué responsabilidades conservan la Contraloría, el Poder Judicial, el Ministerio Público, las entidades públicas y los gobiernos subnacionales, y cómo se coordinarán sus actuaciones.
+
+La segunda implicación se refiere a la profesionalización de la gestión pública. Las políticas de integridad requieren funcionarios capaces de identificar riesgos, manejar procedimientos, analizar información y aplicar estándares éticos. La rotación constante del personal puede debilitar la continuidad de las políticas, por lo que resulta necesario fortalecer la meritocracia, la capacitación y la estabilidad técnica.
+
+La tercera implicación consiste en incorporar la integridad en los procesos ordinarios de gestión. No debería tratarse como una actividad paralela, sino como un criterio transversal para la planificación, el presupuesto, las contrataciones, la gestión de personas, la prestación de servicios y la evaluación de resultados. La integridad es más sólida cuando forma parte de las decisiones cotidianas y no únicamente de planes institucionales separados.
+
+En el ámbito municipal, se requiere una estrategia diferenciada. La aplicación de estándares nacionales debe considerar la diversidad de capacidades y condiciones territoriales. Las municipalidades con menores recursos pueden necesitar asistencia técnica, herramientas simplificadas, capacitación y mecanismos de acompañamiento. Al mismo tiempo, la adaptación no debe convertirse en una justificación para reducir los estándares de transparencia o control.
+
+La cuarta implicación es la necesidad de mejorar el uso de la información. Los datos de control, contrataciones, denuncias, sanciones y riesgos deberían conectarse para identificar patrones y priorizar intervenciones. La interoperabilidad puede contribuir a una mejor prevención, siempre que esté acompañada por reglas de protección de datos, responsabilidades institucionales y capacidades analíticas.
+
+\subsection{Condiciones, tensiones y desafíos pendientes}
+\label{subsec:condiciones-tensiones}
+
+La primera condición para mejorar las políticas de integridad es el compromiso sostenido de la alta dirección. Sin apoyo político y administrativo, las oficinas de integridad pueden carecer de autoridad, recursos o acceso a información. La integridad no puede depender exclusivamente de funcionarios aislados o de iniciativas personales.
+
+La segunda condición es la existencia de indicadores que midan resultados y no solo cumplimiento formal. Registrar la aprobación de un plan o la realización de una capacitación no demuestra que se hayan reducido los riesgos. Se requieren indicadores relacionados con la corrección de deficiencias, la respuesta a denuncias, la reducción de irregularidades recurrentes y la mejora de procesos.
+
+La tercera condición es la articulación entre prevención y sanción. Un sistema excesivamente punitivo puede actuar cuando el daño ya se produjo, mientras que un sistema exclusivamente preventivo podría carecer de consecuencias frente a conductas graves. La política pública debe equilibrar ambos enfoques.
+
+También existen tensiones entre uniformidad y adaptación territorial. Un Modelo de Integridad nacional puede establecer estándares comunes, pero su implementación debe considerar las diferencias entre ministerios, gobiernos regionales y municipalidades. El desafío consiste en mantener objetivos comunes sin imponer procedimientos que resulten inviables para entidades con capacidades muy distintas.
+
+Otra tensión se relaciona con la independencia y ubicación institucional de las oficinas de integridad. Si dependen exclusivamente de autoridades que podrían estar involucradas en riesgos o conflictos de intereses, su capacidad de actuación puede verse limitada. Sin embargo, una autonomía completa también requiere mecanismos de rendición de cuentas para evitar la falta de coordinación con la entidad.
+
+Finalmente, persiste el desafío de demostrar resultados. Las fuentes revisadas permiten identificar problemas, políticas e instrumentos, pero no siempre ofrecen evidencia suficiente para afirmar que las medidas adoptadas hayan reducido efectivamente la corrupción. Por ello, las evaluaciones futuras deben diferenciar entre existencia normativa, implementación institucional y efectos verificables.
+
+% Ejemplo de tabla (con título numerado; no uses colores para transmitir significado):
+% \begin{table}[h]
+% \small\sffamily
+% \caption{Título de la tabla.}
+% \begin{tabular}{lll}
+% \hline
+% Dimensión & Hallazgo & Fuente \\
+% \hline
+% \relleno{texto} & \relleno{texto} & \relleno{clave} \\
+% \hline
+% \end{tabular}
+% \end{table}
+
+%% ----------------------------------------------------------
+\section{Conclusiones y recomendaciones}
+\label{sec:conclusiones-recomendaciones}
+
+\begin{enumerate}
+\item La prevención de la corrupción en el Perú enfrenta principalmente un problema de articulación institucional y de capacidades de implementación. La existencia de múltiples entidades e instrumentos no garantiza una respuesta estatal coherente.
+
+\item El enfoque de integridad pública representa un avance conceptual porque vincula la prevención de la corrupción con la gobernanza, la ética, la gestión de riesgos, la transparencia y la rendición de cuentas. No obstante, persiste una brecha entre el diseño formal de las políticas y su aplicación práctica.
+
+\item Los mecanismos de control son indispensables, pero deben complementarse con medidas preventivas, control interno, gestión de riesgos, seguimiento y corrección de procesos. La detección posterior del daño no sustituye la prevención.
+
+\item Los gobiernos locales requieren atención diferenciada debido a sus capacidades institucionales diversas. El estudio de tres gobiernos locales aporta evidencia relevante, pero no permite generalizar sus resultados a todas las municipalidades peruanas \citep{integridadmunicipal2025}.
+\end{enumerate}
+
+\subsection*{Recomendaciones}
+
+\begin{enumerate}
+\item Fortalecer la rectoría del sistema nacional de integridad mediante una distribución clara de competencias, mecanismos permanentes de coordinación e intercambio de información entre las instituciones involucradas.
+
+\item Profesionalizar las funciones de integridad mediante capacitación especializada, estabilidad del personal, criterios meritocráticos y recursos suficientes para identificar y gestionar riesgos.
+
+\item Integrar la prevención de la corrupción en la planificación, las contrataciones, el presupuesto, la gestión de personas y la evaluación institucional, evitando que el Modelo de Integridad funcione como un instrumento meramente formal.
+
+\item Mejorar la articulación entre control interno, control concurrente, control posterior, investigación y sanción, asegurando que las alertas produzcan respuestas correctivas oportunas.
+
+\item Diseñar indicadores de resultado que permitan evaluar la aplicación real de las políticas de integridad, considerando la reducción de riesgos, la corrección de deficiencias, la atención de denuncias y la disminución de irregularidades recurrentes.
+\end{enumerate}
+
+\subsection*{Agenda de investigación futura}
+
+Las investigaciones futuras deberían evaluar comparativamente la implementación del Modelo de Integridad en los niveles nacional, regional y municipal. También sería conveniente estudiar la relación entre capacidades institucionales, rotación de funcionarios y resultados de las políticas anticorrupción. Finalmente, se necesitan investigaciones longitudinales que permitan determinar si las reformas de integridad producen cambios sostenidos en los procesos de contratación, la gestión de riesgos, la transparencia y la calidad de los servicios públicos.
+
+Las recomendaciones anteriores constituyen propuestas analíticas derivadas de la literatura revisada; no deben presentarse como resultados empíricos comprobados. La evidencia consultada permite identificar condiciones y desafíos, pero se requiere investigación adicional para medir con precisión los efectos de cada reforma.
+
+\bibliographystyle{SageH}
+\bibliography{referencias}
+
+\end{document}

@@ -1,0 +1,85 @@
+\begin{thebibliography}{10}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem[{Cohaila and El{\'{\i}}as~Ayay(2025)}]{integridadmunicipal2025}
+Cohaila A and El{\'{\i}}as~Ayay J (2025) Implementaci{\'o}n del modelo de
+  integridad a nivel municipal: Estudio en tres gobiernos locales en per{\'u}.
+\newblock \emph{Revista de Derecho y Ciencia Pol{\'{\i}}tica} 6(3): 29--52.
+\newblock \doi{10.18800/rdcp.202503.002}.
+\newblock
+  \urlprefix\url{http://www.scielo.org.pe/scielo.php?script=sci_arttext&pid=S2415-09592025000300029&lng=es&nrm=iso}.
+
+\bibitem[{{Contraloría General de la
+  República}(2020)}]{contraloria2020corrupcion}
+{Contraloría General de la República} (2020) Cálculo del tamaño de la
+  corrupción y la inconducta funcional en el perú: Una aproximación
+  exploratoria.
+\newblock Technical report, Observatorio Nacional Anticorrupción.
+\newblock
+  \urlprefix\url{https://repositorio.contraloria.gob.pe/items/a1715626-a9bc-4e52-9880-0086d858b799}.
+
+\bibitem[{Munive~Pariona(2022)}]{munive2022integridad}
+Munive~Pariona E (2022) El sistema de integridad pública en el perú: Una
+  propuesta para fortalecer la gobernanza con integridad.
+\newblock \emph{Ius et Veritas} : 57--69\doi{10.18800/iusetveritas.202202.004}.
+\newblock Issue 65.
+
+\bibitem[{{OECD}(2017)}]{oecd2017integrity}
+{OECD} (2017) \emph{OECD Integrity Review of Peru: Enhancing Public Sector
+  Integrity for Inclusive Growth}.
+\newblock OECD Publishing.
+\newblock \doi{10.1787/9789264271029-en}.
+
+\bibitem[{{OECD}(2024{\natexlab{a}})}]{oecd2024sistema}
+{OECD} (2024{\natexlab{a}}) \emph{Hacia un Sistema Nacional de Integridad y
+  Transparencia en el Perú: Garantizando la coordinación y el impacto}.
+\newblock OECD Publishing.
+\newblock
+  \urlprefix\url{https://www.oecd.org/es/publications/2024/12/towards-a-national-integrity-and-transparency-system-in-peru_0f35258c.html}.
+
+\bibitem[{{OECD}(2024{\natexlab{b}})}]{oecd2024justice}
+{OECD} (2024{\natexlab{b}}) \emph{OECD Justice Review of Peru: Towards
+  Effective and Transparent Justice Institutions for Inclusive Growth}.
+\newblock OECD Publishing.
+\newblock \doi{10.1787/bb556518-en}.
+
+\bibitem[{Pe{\~n}a~Mancillas(2022)}]{penamancillas2022integridad}
+Pe{\~n}a~Mancillas C (2022) Integridad p{\'u}blica y gobernanza: una
+  aproximaci{\'o}n desde la administraci{\'o}n p{\'u}blica.
+\newblock \emph{Revista de la Facultad de Derecho y Ciencia Pol{\'{\i}}tica}
+  \urlprefix\url{https://dialnet.unirioja.es/servlet/articulo?codigo=8441234}.
+\newblock Datos bibliogr{\'a}ficos por verificar: volumen, n{\'u}mero,
+  p{\'a}ginas y DOI.
+
+\bibitem[{{Presidencia del Consejo de Ministros}(2017)}]{pcm2017politica}
+{Presidencia del Consejo de Ministros} (2017) Política nacional de integridad
+  y lucha contra la corrupción.
+\newblock Technical report, Presidencia del Consejo de Ministros.
+\newblock
+  \urlprefix\url{https://cdn.www.gob.pe/uploads/document/file/388273/Politica-Nacional-de-Integridad-y-Lucha-contra-la-Corrupci%C3%B3n.pdf}.
+\newblock Aprobada mediante Decreto Supremo N.° 092-2017-PCM.
+
+\bibitem[{{Presidencia del Consejo de Ministros}(2018)}]{pcm2018plan}
+{Presidencia del Consejo de Ministros} (2018) Plan nacional de integridad y
+  lucha contra la corrupción 2018--2021.
+\newblock Technical report, Presidencia del Consejo de Ministros.
+\newblock
+  \urlprefix\url{https://www.gob.pe/institucion/pcm/colecciones/23399-politica-nacional-de-integridad-y-lucha-contra-la-corrupcion}.
+\newblock Decreto Supremo N.° 044-2018-PCM.
+
+\bibitem[{{Secretaría de Integridad Pública de la Presidencia del Consejo de
+  Ministros}(2026)}]{pcm2026directiva}
+{Secretaría de Integridad Pública de la Presidencia del Consejo de Ministros}
+  (2026) Directiva n.° 001-2026-pcm/sip: Directiva para la implementación del
+  modelo de integridad en las entidades del sector público.
+\newblock Technical report, Presidencia del Consejo de Ministros.
+\newblock
+  \urlprefix\url{https://www.mef.gob.pe/es/tematica-de-integridad/normativa-de-integridad/integridad-publica/34986-resolucion-de-secretaria-de-integridad-publica-n-002-2026-pcm-sip/file}.
+
+\end{thebibliography}

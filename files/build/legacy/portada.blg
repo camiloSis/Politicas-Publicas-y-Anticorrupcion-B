@@ -1,0 +1,5 @@
+[0] Config.pm:329> INFO - This is Biber 2.22
+[0] Config.pm:332> INFO - Logfile is 'portada.blg'
+[44] biber:342> INFO - === mié sep 30, 2026, 19:32:38
+[163] Utils.pm:480> ERROR - Cannot find 'portada.bcf'!
+[163] Biber.pm:137> INFO - ERRORS: 1

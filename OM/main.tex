@@ -1,19 +1,14 @@
 
-%package list
 \documentclass{article}
-%xdxdddxxd
 \usepackage{amsmath}
-%dxd
 \usepackage[top=3cm, bottom=3cm, outer=3cm, inner=3cm]{geometry}
 \usepackage{multicol}
 \usepackage{graphicx}
 \usepackage{url}
-%\usepackage{cite}
 \usepackage{hyperref}
 \usepackage{array}
-%\usepackage{multicol}
 \newcolumntype{x}[1]{>{\centering\arraybackslash\hspace{0pt}}p{#1}}
-\usepackage{natbib}
+\usepackage[natbibapa]{apacite}
 \usepackage{pdfpages}
 \usepackage{multirow}
 \usepackage[normalem]{ulem}
@@ -33,8 +28,6 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{float}
-\usepackage{array}
-
 \newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
 \newcolumntype{N}{@{}m{0pt}@{}}
 
@@ -54,7 +47,7 @@
 \newcommand{\itemInput}{02/10/2026}
 \newcommand{\itemOutput}{05/10/2026}
 \newcommand{\itemDocente}{William M. Bornas Rios}
-\newcommand{\itemTheme}{Mineria de procesos, ERP, ROI, Kardex}
+\newcommand{\itemTheme}{Minería de procesos, ERP, ROI y Kardex}
 \newcommand{\itemPracticeNumber}{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -82,8 +75,7 @@
 \fancyfoot[C]{\itemCourse}
 \fancyfoot[R]{Página \thepage}
 
-% para el codigo fuente
-\usepackage{listings}
+% Para el código fuente
 \usepackage{color, colortbl}
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
@@ -185,220 +177,162 @@
     \section{Introducción}
     \subsection{Contextualización y delimitación del tema}
 
-    Las organizaciones registran cada vez más sus operaciones en sistemas de información como los ERP (\textit{Enterprise Resource Planning}). Estos sistemas dejan huellas digitales (compras, aprobaciones, ingresos y salidas de almacén) que pueden analizarse para comprender cómo se ejecutan realmente los procesos. La minería de procesos aprovecha esas huellas, conocidas como registros de eventos (\textit{event logs}), para reconstruir el proceso real, detectar desviaciones e identificar cuellos de botella.
+    La transformación digital ha incrementado la capacidad de las organizaciones para registrar, integrar y analizar información relacionada con sus actividades operativas. En este contexto, la minería de procesos constituye un enfoque orientado a extraer conocimiento sobre la ejecución real de los procesos a partir de los registros de eventos generados por los sistemas de información. A diferencia de una representación basada únicamente en procedimientos diseñados de manera formal, esta técnica permite observar cómo se desarrollan efectivamente las actividades, identificar variaciones y contrastar el comportamiento observado con modelos de referencia. Entre sus tareas principales se encuentran el descubrimiento de procesos, la comprobación de conformidad y el análisis orientado a la mejora \cite{marin-castro2021preprocessing}.
 
-    El ensayo se delimita a la relación entre cuatro elementos: la minería de procesos, los sistemas ERP, el control de inventarios (con el Kardex como ejemplo concreto) y el ROI como criterio de evaluación económica. A ellos se suma la dimensión organizacional y humana. \textbf{[PENDIENTE]} Precisar si se acotará a un sector (por ejemplo, manufactura, minería o servicios públicos) o se mantendrá un enfoque general.
+    Su utilidad se relaciona directamente con la existencia de sistemas capaces de registrar las actividades organizacionales. Entre ellos destacan los sistemas de \textit{Enterprise Resource Planning (ERP)}, que integran diferentes funciones empresariales y utilizan bases de datos compartidas para centralizar información de las operaciones. Esta integración puede generar una fuente importante de datos para el análisis de procesos. Sin embargo, la existencia de un ERP no implica necesariamente que la información producida sea suficiente o adecuada para generar mejoras. La calidad de los datos y de la información se relaciona con el desempeño organizacional, mientras que el ajuste entre la organización y el sistema también interviene en la obtención de beneficios \cite{erpimpact2024}.
+
+    Esta relación puede observarse también en la gestión de inventarios. Los registros de entradas, salidas y existencias —como los gestionados mediante un \textit{Kardex}— permiten representar parte de la dinámica de los inventarios y pueden integrarse dentro de sistemas de información empresariales. La importancia de estos mecanismos no se limita al registro contable de mercancías, puesto que el control de inventarios puede relacionarse con costos de almacenamiento, disponibilidad de materiales y desempeño organizacional. Un estudio realizado en empresas mineras de Zimbabue encontró una relación positiva entre los sistemas de control de inventarios y el desempeño de las organizaciones estudiadas \cite{inventorycontrol2024}.
+
+    Por tanto, el presente ensayo no pretende analizar la minería de procesos únicamente como una herramienta tecnológica ni asumir que su implementación produce automáticamente mejores resultados. El enfoque se delimita a examinar la relación entre minería de procesos, sistemas de información empresarial, gestión de inventarios, factores organizacionales y humanos y desempeño organizacional, considerando además la dimensión económica mediante el \textit{retorno de la inversión (ROI)}. En otras palabras, se busca analizar qué ocurre entre la implementación de una tecnología y la obtención efectiva de resultados: qué datos están disponibles, qué capacidades posee la organización, cómo se gestionan los cambios y bajo qué condiciones las mejoras identificadas pueden traducirse en beneficios organizacionales y económicos.
 
     \subsection{Antecedentes y relevancia}
 
-    La literatura reciente sugiere que existe una brecha entre \textit{detectar} un problema y \textit{resolverlo}. Una revisión sistemática identifica siete desafíos que dificultan convertir los hallazgos de la minería de procesos en mejoras efectivas, entre ellos la falta de apoyo de la alta dirección y la resistencia al cambio [F 1.1]. En paralelo, la investigación sobre ERP muestra resultados mixtos entre la inversión y el desempeño organizacional [F 3.1].
+    La minería de procesos ha sido desarrollada precisamente para aprovechar los datos generados durante la ejecución de actividades empresariales. Una revisión de la literatura sobre minería de procesos orientada a objetivos destaca el valor de los registros de eventos y señala que la incorporación explícita de los objetivos de distintos actores todavía constituye una línea de investigación limitada \cite{ghasemi2020eventlogs}. Esto resulta relevante porque los procesos organizacionales no responden únicamente a actividades aisladas, sino también a objetivos que pueden coexistir o entrar en conflicto.
 
-    El tema es relevante porque las organizaciones que invierten en estas tecnologías esperan resultados, y esas expectativas pueden ser mayores que lo que la evidencia respalda. \textbf{[BUSCAR FUENTE]} Datos sobre adopción de minería de procesos y ERP en el contexto peruano o latinoamericano, si se quiere justificar la relevancia local.
+    Asimismo, la calidad de los registros constituye una condición importante para obtener modelos útiles. La complejidad y diversidad de los registros generados en contextos reales hacen necesario limpiarlos y preprocesarlos antes del análisis \cite{marin-castro2021preprocessing}. En consecuencia, la información utilizada por la minería de procesos no debe considerarse automáticamente como una representación perfecta de la realidad organizacional.
+
+    La literatura más reciente también apunta hacia una perspectiva de madurez organizacional. Numerosas organizaciones tienen dificultades para pasar de la intención de utilizar minería de procesos a una implementación efectiva y sostenible debido a deficiencias en distintas dimensiones de preparación organizacional. Un modelo de madurez identifica factores que las organizaciones pueden abordar para superar la distancia entre la intención y la acción \cite{processminingmaturity2024}.
+
+    Existen, sin embargo, casos que muestran resultados concretos. Por ejemplo, un estudio aplicó minería de procesos al mantenimiento de equipos en una operación minera e identificó cuellos de botella e ineficiencias \cite{miningindustry2023}. El caso muestra que, bajo determinadas condiciones, los registros de eventos pueden aportar información operacional útil para analizar el proceso.
+
+    En el caso de los ERP, la evidencia presenta una situación similar. Una revisión sistemática sobre su implementación en grandes empresas identifica factores críticos como el apoyo de la alta dirección, la gestión del proyecto y la comunicación \cite{alimiller2017erp}. Una revisión más reciente destaca la preparación organizacional, el apoyo directivo, la capacitación de los usuarios y la selección de proveedores, y señala la resistencia al cambio, los costos de implementación y las dificultades de integración de datos como desafíos relevantes \cite{talo2025erp}.
+
+    En consecuencia, la evidencia no permite reducir la relación entre tecnología y desempeño a una causalidad simple. La investigación sobre ERP y desempeño organizacional presenta resultados mixtos, y factores internos y contextuales pueden modificar sus efectos. En un análisis de 200 organizaciones, la calidad de los datos y de la información predijo significativamente el desempeño, mientras que el sector, el tamaño de la empresa y el tiempo de utilización del ERP moderaron algunas relaciones \cite{erpimpact2024}.
+
+    Esta cuestión también afecta la interpretación del ROI. El retorno económico de una inversión tecnológica no puede entenderse únicamente a partir de su implementación, puesto que los costos, beneficios, horizonte temporal y dimensiones del desempeño deben ser considerados conjuntamente. La literatura sobre ERP muestra precisamente que los efectos financieros pueden variar según el periodo y las condiciones de implementación, lo que dificulta atribuir automáticamente cualquier mejora económica a la adopción de una tecnología.
 
     \subsection{Problema o cuestión que se plantea}
 
-    Si la minería de procesos permite identificar ineficiencias con precisión, cabría esperar que su implementación mejore el desempeño. Sin embargo, esa expectativa supone que los datos son adecuados, que la organización puede actuar sobre lo detectado y que el resultado compensa la inversión.
+    A partir de lo anterior surge la cuestión central de este ensayo: ¿basta con implementar minería de procesos para mejorar el desempeño organizacional, o sus resultados dependen de factores tecnológicos, organizacionales y humanos? Esta pregunta adquiere importancia porque una organización puede disponer de grandes cantidades de datos y herramientas avanzadas de análisis sin poseer necesariamente las condiciones necesarias para convertir sus resultados en mejoras sostenibles.
 
-    \textbf{Pregunta central (provisional):} ¿La implementación de minería de procesos garantiza una mejora del desempeño organizacional, o su impacto depende de otros factores del sistema empresarial?
+    Entre estos factores se encuentran la calidad y estructura de los datos, la disponibilidad de recursos, las capacidades técnicas y administrativas, el grado de madurez organizacional, la gestión del cambio, la capacitación de los usuarios y las condiciones en las que los trabajadores ejecutan los procesos. Incluso cuando una herramienta identifica correctamente un cuello de botella, todavía es necesario que la organización pueda interpretar sus causas, decidir una intervención y disponer de los recursos necesarios para ejecutarla.
+
+    El problema, por tanto, no consiste en determinar si la minería de procesos puede producir mejoras, pues existen casos que muestran su utilidad, sino en determinar bajo qué condiciones esas capacidades pueden traducirse en un mejor desempeño organizacional y, posteriormente, en resultados económicos que justifiquen la inversión realizada.
 
     \subsection{Objetivo del ensayo}
 
-    Analizar, a partir de literatura académica, en qué medida el impacto de la minería de procesos depende de la calidad de los datos provenientes de sistemas como el ERP, de factores organizacionales y humanos, y de la evaluación económica de las mejoras. \textbf{[PENDIENTE]} Ajustar la redacción cuando se definan los argumentos finales.
+    El objetivo de este ensayo es analizar críticamente si la minería de procesos, por sí sola, garantiza una mejora integral del desempeño organizacional, considerando evidencia que respalde su capacidad para identificar ineficiencias y apoyar la mejora de procesos, así como evidencia que muestre las condiciones y limitaciones que pueden impedir que dichos beneficios se materialicen. Para ello, se examinará la relación entre minería de procesos, ERP, gestión de inventarios mediante herramientas como el Kardex y evaluación económica mediante ROI, incorporando además los factores organizacionales y humanos que intervienen en dicha relación.
 
     \subsection{Tesis o idea central}
 
-    \textbf{Tesis provisional:} La implementación de la minería de procesos, por sí sola, no garantiza una mejora integral del desempeño organizacional, ya que sus resultados dependen de la interacción de múltiples factores: los recursos disponibles, las capacidades organizacionales, el contexto operativo, la gestión de los procesos, las condiciones del trabajador y el nivel de madurez tecnológica. Los sistemas ERP y el Kardex pueden aportar la infraestructura y los datos necesarios para el análisis, mientras que el ROI permite evaluar el impacto económico de las mejoras.
+    Este ensayo sostiene que la implementación de la minería de procesos, por sí sola, no garantiza una mejora integral del desempeño organizacional, debido a que sus resultados dependen de la interacción entre factores tecnológicos, organizacionales y humanos. Entre estos se encuentran la calidad de los datos disponibles, los recursos y capacidades de la organización, la gestión de los procesos, la preparación para el cambio y las condiciones en las que los trabajadores desarrollan sus funciones.
 
-    \textbf{[REVISAR TESIS]} Las fichas de fuentes sugieren una formulación posible: la minería de procesos como condición \textit{habilitante pero no suficiente}. Esta versión reconoce de forma explícita que la herramienta sí puede identificar desviaciones objetivas. Decidir si se adopta tras leer las fuentes.
+    Desde esta perspectiva, sistemas como los ERP y mecanismos de gestión de inventarios como el Kardex pueden proporcionar información fundamental para representar y analizar las operaciones, pero no aseguran por sí mismos que las decisiones derivadas de dicha información sean implementadas eficazmente. La minería de procesos puede contribuir a descubrir desviaciones, cuellos de botella y oportunidades de mejora; sin embargo, identificar una ineficiencia no equivale necesariamente a corregirla, ni una mejora operativa garantiza automáticamente un resultado económico favorable. Por ello, el impacto de estas tecnologías debe comprenderse como el resultado de una interacción entre datos, tecnología, procesos, organización y personas, cuya efectividad final debe evaluarse también en función de los beneficios obtenidos y de los recursos invertidos.
 
     \section{Desarrollo}
     \subsection{Marco conceptual}
 
-    Los cuatro conceptos se presentan como eslabones de una misma cadena, no como definiciones aisladas:
-
-    \begin{verbatim}
-ERP
-↓ generación y centralización de datos
-event logs
-↓ extracción y preparación
-minería de procesos
-↓ identificación de desviaciones / cuellos de botella
-decisiones y posibles mejoras (requieren capacidad organizacional)
-↓
-resultados organizacionales
-↓
-evaluación mediante ROI
-    \end{verbatim}
-
-    \textbf{[CONECTAR]} Cada flecha es un punto donde la cadena puede romperse. Los tres argumentos del ensayo se apoyan en tres de esas rupturas posibles: datos deficientes (flecha ERP → \textit{event logs}), incapacidad de actuar (decisiones → resultados) y rentabilidad no demostrada (resultados → ROI).
+    Los conceptos de minería de procesos, sistemas ERP, retorno de la inversión y Kardex se relacionan en una secuencia: los sistemas de información registran operaciones; esos registros pueden prepararse y analizarse para reconstruir los procesos; los hallazgos pueden orientar decisiones de mejora; y los resultados económicos de las intervenciones pueden evaluarse mediante el ROI. Ninguna transición es automática: la calidad de los datos afecta el análisis, la capacidad organizacional condiciona la aplicación de los hallazgos y la evaluación económica requiere distinguir los beneficios efectivamente obtenidos de las oportunidades identificadas.
 
     \subsubsection{Minería de procesos}
 
-    Conjunto de técnicas que analizan registros de eventos para descubrir, verificar y mejorar procesos tal como ocurren en la práctica. Su valor diagnóstico consiste en contrastar el proceso \textit{real} con el proceso \textit{supuesto}. \textbf{[BUSCAR FUENTE]} Definición de un autor de referencia del campo para citarla de forma directa.
+    La minería de procesos es una disciplina situada entre la ciencia de datos y la gestión de procesos de negocio. Analiza los registros de eventos (\textit{event logs}) generados por los sistemas de información para obtener evidencia sobre cómo se ejecutan las operaciones. A diferencia de los modelos elaborados únicamente mediante entrevistas o diagramas manuales, permite examinar las actividades que quedaron registradas y contrastar el comportamiento observado con el proceso esperado. Sus tareas principales incluyen el descubrimiento de procesos, la comprobación de conformidad y el análisis orientado a la mejora \cite{marin-castro2021preprocessing}.
 
-    Punto clave para el ensayo: la minería de procesos es una herramienta de \textbf{diagnóstico}. Que sea una condición para mejorar no significa que garantice la mejora.
+    En un proceso de compras, por ejemplo, el registro de la creación, modificación y aprobación de una orden permite estudiar las etapas y sus tiempos. Sin embargo, la confiabilidad del análisis depende de que los eventos estén correctamente asociados a cada caso y cuenten con datos completos y consistentes. El preprocesamiento, que comprende la limpieza y el tratamiento de registros incompletos o inconsistentes, es por ello una condición para obtener modelos útiles \cite{marin-castro2021preprocessing}. La técnica ofrece un diagnóstico basado en los datos disponibles, pero identificar una desviación o un cuello de botella no garantiza que la organización lo corrija.
+
+    El análisis también adquiere mayor relevancia cuando se vincula con los objetivos de la organización. La perspectiva orientada a metas relaciona los procesos con los objetivos de sus distintos actores, en lugar de limitarse a describir secuencias de actividades \cite{ghasemi2020eventlogs}. Asimismo, la preparación organizacional y la madurez en la adopción de esta práctica influyen en la posibilidad de pasar de la intención a una aplicación efectiva \cite{processminingmaturity2024}. Como ejemplo de aplicación, Velasquez et al. estudiaron el uso de minería de procesos en un proceso de mantenimiento de la industria minera \cite{miningindustry2023}.
 
     \subsubsection{Sistemas ERP}
 
-    Sistemas que integran procesos de distintas áreas (compras, ventas, inventario, finanzas) sobre una base de datos común. En este ensayo interesan en dos papeles: como \textbf{fuente de datos} para la minería de procesos y como \textbf{objeto de implementación} que ya está condicionado por recursos, capacitación y cambio organizacional [F 3.2].
+    Los sistemas de planificación de recursos empresariales (ERP, por sus siglas en inglés) integran funciones organizacionales, como compras, ventas, finanzas, producción e inventarios, mediante una base de datos compartida. La integración permite que una transacción registrada en un área pueda estar disponible para otras sin volver a introducir la misma información. Los ERP interesan en este ensayo tanto como sistemas de gestión como posibles fuentes de registros para analizar procesos.
 
-    \textbf{[DISCUTIR]} Si el ERP está mal implementado o es poco usado, los datos que alimentan la minería de procesos también lo estarán.
+    Cada transacción puede dejar información sobre la actividad, el documento, el usuario y el momento en que ocurrió, elementos que pueden ayudar a reconstruir procesos como el ciclo de compras o el abastecimiento. No obstante, tener un ERP no asegura que los registros sean completos ni que representen fielmente todas las operaciones. La calidad de los datos y de la información se relaciona con el desempeño organizacional, pero los beneficios también dependen de factores de ajuste entre el sistema y la organización \cite{erpimpact2024}.
+
+    La implementación de un ERP, además, comprende dimensiones organizacionales y humanas. La revisión de Ali y Miller analiza factores críticos de estos proyectos \cite{alimiller2017erp}; estudios posteriores destacan la preparación organizacional, el apoyo directivo, la capacitación y la gestión de la resistencia al cambio \cite{talo2025erp}. Por ello, una configuración técnicamente adecuada no basta si el sistema no se adopta o si sus usuarios no registran las operaciones de forma consistente: en esas condiciones, también se limita el valor de los datos para la minería de procesos.
 
     \subsubsection{Retorno de la inversión (ROI)}
 
-    Indicador que relaciona el beneficio económico obtenido con el costo de la inversión. En el ensayo sirve para distinguir entre "mejorar un proceso" y "justificar económicamente la inversión". \textbf{[BUSCAR FUENTE]} Referencia sobre cómo se calcula el ROI en proyectos de tecnologías de la información y sus limitaciones (por ejemplo, beneficios intangibles o costos ocultos de implementación).
+    El retorno de la inversión (ROI, por sus siglas en inglés) es un indicador que compara el beneficio neto obtenido con el costo de la inversión y suele expresarse como porcentaje. En este ensayo permite diferenciar la identificación de una oportunidad de mejora de la demostración de que la inversión produjo un retorno económico.
 
-    \textbf{[VERIFICAR]} Si alguna de las fuentes reunidas calcula un ROI explícito para minería de procesos. En la lista actual no se identifica ninguna que lo haga directamente.
+    Al evaluar un proyecto de ERP o de minería de procesos, entre los costos que podrían considerarse están las licencias, la infraestructura, la consultoría, la capacitación y el tiempo del personal. Los beneficios posibles pueden incluir ahorros, reducciones en los tiempos de ejecución o ingresos adicionales. Para que una reducción de tiempos se refleje en el ROI, por ejemplo, debe traducirse en un beneficio económico medible. Por tanto, el cálculo depende de definir con claridad qué costos y beneficios se incluyen y durante qué periodo se miden.
+
+    El retorno tampoco se deriva automáticamente de una herramienta que funciona o de una ineficiencia detectada. Entre el hallazgo y el beneficio económico intervienen la implementación efectiva de los cambios y su adopción por parte de los usuarios. En ese sentido, los factores de preparación, capacitación y gestión del cambio asociados con la implementación de ERP \cite{talo2025erp}, así como la madurez organizacional en minería de procesos \cite{processminingmaturity2024}, pueden condicionar la materialización de los beneficios.
 
     \subsubsection{Kardex}
 
-    Registro de entradas, salidas y saldos de existencias, que permite la trazabilidad de los movimientos de inventario. En la literatura internacional el término más habitual es \textit{inventory control systems} [F 5.1], por lo que conviene indicar esa equivalencia al introducir el concepto.
+    El Kardex es un registro sistemático de los movimientos de inventario que consigna entradas, salidas y saldos disponibles, junto con información como fechas, cantidades y documentos de respaldo. En un sistema informatizado puede actualizarse cuando se registra una compra, recepción, despacho o ajuste. Así, un movimiento de inventario puede dejar una huella útil para el control cotidiano y, si contiene los datos necesarios, para analizar el proceso asociado.
 
-    En el ensayo funciona como \textbf{ejemplo concreto} de registro operativo del que puede extraerse un \textit{event log} (cada movimiento tiene actividad, fecha y responsable). \textbf{[CONECTAR]} Con el Argumento 1: un Kardex mal alimentado produce una imagen deformada del proceso de almacén.
+    La exactitud de los registros importa para la toma de decisiones: discrepancias entre las existencias físicas y las registradas pueden contribuir a quiebres de stock, compras innecesarias o capital inmovilizado. Estudios sobre sistemas de control de inventarios y sobre ERP e inventarios examinan su relación con el desempeño de las organizaciones y la exactitud operativa \cite{inventorycontrol2024,inventoryerp2024}. En la cadena de suministro, los movimientos también pueden analizarse como eventos para estudiar demoras o desviaciones; si se registran tarde, de forma duplicada o incompleta, el análisis deja de ofrecer una representación confiable del proceso, como ocurre con otros registros de eventos \cite{marin-castro2021preprocessing}.
 
-    \textbf{[POSIBLE EJEMPLO]} \textit{Ejemplo hipotético:} una empresa registra en su ERP cada solicitud de material, su aprobación y la salida del almacén. La minería de procesos revela que muchas solicitudes se aprueban fuera de orden. Pero si parte de las salidas se anotan después en el Kardex (o no se anotan), el análisis ve una versión incompleta del proceso. Este ejemplo no constituye evidencia empírica.
+    \subsubsection*{Nota sobre el alcance de las fuentes}
+
+    Las fuentes reunidas no tratan explícitamente el ROI como concepto central, por lo que su definición en este marco conceptual es general y no se atribuye a esos estudios. Asimismo, las referencias a Velasquez et al. (2023) y a la publicación del \textit{Sinergi International Journal of Logistics} (2024) se limitan a los temas que sus descripciones permiten sostener: una aplicación de minería de procesos en mantenimiento y la relación entre ERP, exactitud de inventario y desempeño operativo, respectivamente. Antes de la entrega, conviene contrastar estos matices y cualquier resultado específico con los textos originales.
 
     \subsection{Argumento 1 — La minería de procesos depende de la calidad del sistema de información}
 
-    \textbf{Idea a defender:} La capacidad de la minería de procesos para generar mejoras está condicionada por la calidad, disponibilidad y representatividad de los datos que proporcionan sistemas como los ERP.
+    La capacidad de la minería de procesos para producir conocimiento útil depende de la calidad, disponibilidad y representatividad de los registros de eventos (\textit{event logs}) que recibe. Estos registros permiten examinar las actividades y secuencias que el sistema ha capturado, pero no equivalen a una observación completa de toda la realidad organizacional. Por ello, la minería de procesos construye una representación del proceso a partir de los datos disponibles.
 
-    Una posible línea de razonamiento es la siguiente. La minería de procesos solo ve lo que queda registrado. Si los datos están incompletos, son ruidosos o están mal extraídos, el modelo resultante puede representar de forma inadecuada el proceso real. La revisión de preprocesamiento de \textit{event logs} señala que las técnicas de preparación tienen alto impacto en el desempeño de las tareas de minería de procesos y que el ruido y la incompletitud son problemas frecuentes [F 2.1]. Un preprint más reciente sostiene que la calidad de los datos es uno de los desafíos más apremiantes y cataloga 29 desafíos en la generación de \textit{event logs} [F 2.2] \textbf{[VERIFICAR]}.
+    Los registros extraídos de sistemas de información pueden contener datos incompletos, inconsistentes o mal estructurados. El preprocesamiento, que comprende su limpieza, la correlación de eventos con los casos correspondientes y el tratamiento de inconsistencias, es una etapa importante para obtener modelos confiables \cite{marin-castro2021preprocessing}. Las dificultades comienzan incluso antes del análisis: una revisión sistemática sobre la generación de \textit{event logs} identifica la calidad de los datos y otros requisitos de registro como desafíos centrales \cite{eventloggeneration2026}.
 
-    Desde el lado del ERP, el estudio con modelado de ecuaciones estructurales reporta que la calidad de datos e información predice significativamente el desempeño organizacional [F 3.1] \textbf{[VERIFICAR]}. En inventarios, la literatura asocia los sistemas de control con datos más exactos, aunque el efecto depende de la calidad del registro, la integración y el uso efectivo del sistema [F 5.1, F 5.2].
+    Los ERP pueden aportar información de varias áreas mediante bases de datos compartidas, pero su centralización no garantiza que todos los eventos relevantes se registren de manera adecuada. La calidad de los datos y de la información se relaciona con el desempeño organizacional, y el ajuste entre el sistema y la organización también interviene en los beneficios asociados al ERP \cite{erpimpact2024}. De este modo, un modelo construido a partir de registros incompletos o poco representativos puede describir solo una parte del proceso. Sus resultados deben interpretarse considerando las limitaciones de la fuente de datos.
 
-    Quedan abiertas dos cuestiones:
+    Esto también se aplica a los inventarios. Si las entradas, salidas, tiempos o responsables no se registran correctamente en el ERP o en un Kardex digital, el análisis podría ofrecer una imagen incompleta del flujo de materiales. La calidad del registro constituye así una condición necesaria para que el diagnóstico sea útil, aunque no basta por sí sola para asegurar que se implemente una mejora.
 
-    \begin{itemize}
-        \item Las actividades manuales o informales pueden quedar fuera del registro digital. \textbf{[BUSCAR FUENTE]} Evidencia específica sobre actividades no capturadas en \textit{event logs} derivados de ERP.
-        \item Una ruta de razonamiento posible es la ausencia de relación directa entre "tener un ERP" y "tener datos aptos para minería". \textbf{[DISCUTIR]}
-    \end{itemize}
+    \subsection{Argumento 2 — La mejora tecnológica depende de la preparación organizacional y la gestión del cambio}
 
-    \textbf{[CONECTAR]} Este argumento prepara el Argumento 2: la calidad de los datos depende también de cómo los trabajadores los registran.
+    Disponer de registros adecuados y herramientas analíticas no significa que una organización pueda resolver automáticamente los problemas que estas herramientas identifican. La minería de procesos proporciona información para comprender cómo se ejecutan las actividades; convertir ese conocimiento en acciones requiere decisiones, coordinación, recursos y capacidad de adaptación. Las organizaciones pueden encontrar dificultades para avanzar desde la intención de adoptar minería de procesos hasta su implementación y uso sostenido, por lo que la preparación y la madurez organizacionales son relevantes \cite{processminingmaturity2024}.
 
-    \subsection{Argumento 2 — La mejora tecnológica depende de factores organizacionales y humanos}
+    La experiencia de implementación de ERP apunta a condiciones similares. Una revisión sistemática identifica el apoyo de la alta dirección, la gestión del proyecto y la comunicación como factores críticos \cite{alimiller2017erp}. Otra revisión destaca la preparación organizacional, la capacitación de usuarios y la selección de proveedores, y señala la resistencia al cambio, los costos y las dificultades de integración entre los desafíos frecuentes \cite{talo2025erp}.
 
-    \textbf{Idea a defender:} El desempeño organizacional no depende exclusivamente de la tecnología, sino de la interacción entre tecnología, procesos, capacidades organizacionales y trabajadores.
+    La alineación entre el ERP y la organización, así como la reingeniería de procesos, también se relacionan con los beneficios que pueden obtenerse del sistema \cite{erpimpact2024}. Una herramienta puede mostrar que un procedimiento es lento o que ciertos recursos se utilizan de manera ineficiente, pero resolver el problema podría requerir cambios en responsabilidades, procedimientos, capacitación, infraestructura o presupuesto. Si esas condiciones no están disponibles, el hallazgo puede permanecer como información sin traducirse en una mejora sostenida.
 
-    Identificar un cuello de botella no implica que la organización pueda resolverlo de inmediato. La revisión sobre la brecha entre \textit{insights} y mejora agrupa los obstáculos en compromiso organizacional, \textit{expertise} y otros factores, y menciona el apoyo insuficiente de la dirección y la resistencia al cambio [F 1.1]. El modelo de madurez propuesto en otra fuente reúne gestión de proyectos, apoyo directivo, calidad de datos, recursos, \textit{expertise}, gestión del cambio y capacitación como factores de éxito [F 1.2] \textbf{[VERIFICAR]} (la ficha indica cinco factores y 23 elementos).
+    Por ello, la minería de procesos debe entenderse como parte de una transformación organizacional más amplia. La tecnología puede ayudar a localizar una oportunidad, pero la organización debe contar con las capacidades necesarias para interpretarla, decidir una intervención y llevarla a la práctica.
 
-    La literatura ERP converge en lo mismo: el éxito depende de la preparación organizacional, el apoyo de la alta dirección y la capacitación; los obstáculos incluyen resistencia, costos, integración de datos y capacitación insuficiente [F 3.3]. Y el ajuste organizacional y la reingeniería de procesos influyen en los beneficios obtenidos del ERP [F 3.1].
+    \subsection{Argumento 3 — Los factores humanos también condicionan el desempeño}
 
-    \textbf{Dimensión humana (explorar con cautela).} Esta sección incorpora a los trabajadores como parte del sistema y no como un tema separado. Líneas posibles:
+    Los procesos organizacionales son ejecutados, supervisados y modificados por personas. La incorporación de herramientas digitales puede cambiar la manera en que los trabajadores reciben información y realizan sus actividades, por lo que una evaluación centrada exclusivamente en indicadores de eficiencia podría dejar fuera las condiciones en que se alcanzan los resultados.
 
-    \begin{itemize}
-        \item \textbf{Capacitación y adaptación:} cómo influye la formación en la recuperación del desempeño tras una implementación. \textbf{[BUSCAR FUENTE]} Estudios sobre ERP que describan una intensificación inicial del trabajo seguida de recuperación con capacitación más amplia. Esta idea figura en el plan del ensayo, pero la lista actual no contiene una fuente que la respalde.
-        \item \textbf{Resistencia al cambio y cultura:} por ejemplo, la dependencia de aprobaciones en papel. \textbf{[BUSCAR FUENTE]} Caso de implementación ERP analizado con minería de procesos que reporte problemas técnicos, de migración de datos y culturales. \textbf{[VERIFICAR]} Hasta localizarlo, no debe afirmarse como caso real.
-        \item \textbf{Uso de los datos:} una implementación orientada solo a maximizar productividad podría producir efectos distintos según cómo se usen los datos (apoyo a la mejora o vigilancia) y según las condiciones organizacionales. Se trata de una \textbf{hipótesis de trabajo}, no de un hallazgo.
-    \end{itemize}
+    La literatura sobre ERP identifica la capacitación y la resistencia al cambio como cuestiones relevantes de implementación \cite{talo2025erp}. La resistencia no debe interpretarse necesariamente como una oposición irracional: también puede reflejar dificultades de adaptación, falta de competencias o cambios en las prácticas existentes. La capacitación y el acompañamiento ayudan a que los usuarios puedan incorporar las herramientas y registrar las operaciones de forma consistente.
 
-    \textbf{[BUSCAR FUENTE]} No se localizó evidencia revisada por pares que demuestre directamente que la minería de procesos, usada para monitorear a los trabajadores, produzca intensificación laboral o afecte la autonomía. Términos de búsqueda sugeridos: "\textit{process mining} AND \textit{employee monitoring}", "\textit{workplace surveillance} AND \textit{digitalization}", "\textit{algorithmic management} AND \textit{work intensification}", "\textit{ERP implementation} AND \textit{employee resistance}", "\textit{ERP implementation} AND \textit{work stress}".
+    La minería de procesos permite observar con mayor detalle las actividades registradas. Esa visibilidad puede ayudar a localizar pasos redundantes o problemas de asignación de recursos. También cabe considerar, como una hipótesis de análisis y no como un resultado demostrado por las fuentes reunidas, que el uso de esos mismos datos podría orientar mecanismos de supervisión o metas de productividad más exigentes. La perspectiva de minería de procesos orientada a objetivos recuerda que los procesos pueden involucrar a varios actores y que sus objetivos no siempre coinciden \cite{ghasemi2020eventlogs}.
 
-    \textbf{[REVISAR TESIS]} Si la búsqueda no encuentra respaldo empírico, esta parte debería presentarse como línea de discusión y no como argumento probado.
+    Por ejemplo, reducir el tiempo registrado de una actividad no representa necesariamente una mejora si el tiempo adicional era necesario para controles de calidad o si el problema simplemente se desplaza a otra etapa. Con las fuentes disponibles no corresponde afirmar que la minería de procesos cause por sí misma estrés laboral o pérdida de autonomía. Sí es pertinente reconocer que la forma en que una organización interpreta y utiliza los datos es parte de la implementación. Una mejora sostenible debe considerar tanto el funcionamiento del proceso como las condiciones de las personas que lo ejecutan.
 
-    \subsection{Argumento 3 — Identificar mejoras no equivale a demostrar rentabilidad}
+    \subsection{Argumento 4 — Identificar mejoras no equivale a demostrar rentabilidad}
 
-    \textbf{Idea a defender:} Una mejora de proceso no demuestra por sí misma que la inversión tecnológica haya sido económicamente conveniente. El desempeño tiene varias dimensiones: operativa, organizacional, humana y económica.
+    Una mejora operativa no demuestra por sí sola que la inversión tecnológica haya sido económicamente conveniente. El ROI, definido en el marco conceptual como la relación entre el beneficio neto y el costo de la inversión, requiere comparar costos y beneficios efectivamente obtenidos durante un periodo determinado. Las fuentes revisadas aquí no calculan explícitamente el ROI de la minería de procesos, por lo que no debe confundirse una oportunidad identificada con un retorno comprobado.
 
-    Secuencia lógica:
+    El estudio sobre mantenimiento en la industria minera muestra que la minería de procesos puede ayudar a representar el proceso e identificar cuellos de botella e ineficiencias \cite{miningindustry2023}. Sin embargo, diagnosticar el costo potencial de un problema no equivale a demostrar que ese costo se evitó: para materializar el beneficio es necesario implementar cambios y comprobar sus resultados. Asimismo, los costos de implementación son uno de los desafíos que señala la literatura sobre ERP \cite{talo2025erp}, mientras que la relación entre ERP y desempeño puede variar según factores organizacionales y contextuales \cite{erpimpact2024}.
 
-    \begin{verbatim}
-minería de procesos → identifica oportunidad
-→ la organización implementa un cambio
-→ se producen resultados
-→ el ROI evalúa económicamente la inversión
-    \end{verbatim}
-
-    El caso de mantenimiento minero ilustra el punto. La minería de procesos permitió detectar cuellos de botella y cuantificar una pérdida de 23 800 horas operativas anuales y un costo de no producción cercano a 1,12 millones de USD al año \textbf{[VERIFICAR]}. Pero esas cifras describen el \textit{costo del problema diagnosticado}; no prueban que la organización haya capturado ese ahorro, que depende de implementar estrategias de mantenimiento efectivas [F 4.2]. \textbf{[DISCUTIR]} Esta diferencia entre "costo del problema" y "beneficio obtenido" es una de las ideas más útiles para sostener el argumento.
-
-    En la literatura ERP, la relación entre inversión y desempeño arroja resultados mixtos [F 3.1], y una revisión señala costos altos entre los obstáculos [F 3.3].
-
-    \textbf{[BUSCAR FUENTE]} Evidencia que calcule costos totales de proyectos de minería de procesos (licencias, extracción de datos, capacitación, tiempo del personal) frente a beneficios.
-
-    \textbf{[CONECTAR]} Con 2.1.3: el ROI solo es útil si los beneficios y costos se miden con criterios explícitos. \textbf{[PENDIENTE]}
+    En consecuencia, la evaluación económica debe distinguir entre el problema detectado, la intervención ejecutada y el beneficio que finalmente se obtuvo. Solo al considerar también los costos de tecnología, integración, capacitación y cambio organizacional puede valorarse si los resultados justifican la inversión.
 
     \subsection{Contraargumento y refutación}
 
-    \textbf{Contraargumento.} La evidencia demuestra que la minería de procesos sí puede producir mejoras objetivas. Es una posición defendible, y la literatura ofrece casos que la respaldan:
+    Un contraargumento importante sostiene que la minería de procesos puede producir mejoras concretas en procesos reales. El caso del Gobierno de Canadá ofrece evidencia de ese potencial: el análisis de un proceso de verificación de seguridad identificó escenarios excepcionales, ciclos que consumían tiempo y problemas de asignación de recursos. Tras intervenciones posteriores, el tiempo de las sesiones informativas de seguridad se redujo de alrededor de siete días a 46 horas y el tiempo total del proceso pasó, en promedio, de unos 31 a 26 días \cite{digitalservice2024}.
 
-    \begin{itemize}
-        \item En un proceso de verificación de seguridad del gobierno canadiense, la minería de procesos identificó escenarios excepcionales, bucles que consumían tiempo y problemas de asignación de recursos. Tras intervenciones basadas en esos hallazgos, el tiempo de \textit{briefing} bajó de unos 7 días a 46 horas y el tiempo total, de unos 31 a 26 días [F 4.1] \textbf{[VERIFICAR]}. Es un preprint con análisis antes y después.
-        \item En el caso de mantenimiento minero, la técnica permitió representar el proceso y detectar ineficiencias con relevancia económica potencial [F 4.2].
-        \item Revisiones sobre ERP e inventarios asocian estos sistemas con mejoras de eficiencia y exactitud de datos [F 3.3, F 5.1].
-    \end{itemize}
+    De forma complementaria, el estudio de mantenimiento minero utilizó minería de procesos para representar el proceso e identificar ineficiencias \cite{miningindustry2023}. Estos casos respaldan la utilidad de la técnica como herramienta de diagnóstico y muestran que, cuando el análisis se conecta con intervenciones, pueden observarse mejoras en procesos específicos.
 
-    \textbf{Refutación.} Parte del contraargumento es válida: la minería de procesos puede ser eficaz como herramienta de diagnóstico y, cuando el diagnóstico se conecta con intervenciones concretas, puede asociarse con reducciones de tiempo. Aun así, esto no refuta la tesis, por tres razones provisionales:
+    Esta evidencia no contradice la tesis de que la minería de procesos por sí sola no garantiza una mejora integral. En el caso canadiense, los cambios se observaron después de intervenciones organizacionales, no como consecuencia automática de instalar una herramienta. Los ejemplos muestran una secuencia que requiere datos, análisis, interpretación, decisiones y ejecución. La madurez organizacional influye en la posibilidad de convertir la intención de adoptar minería de procesos en una práctica efectiva \cite{processminingmaturity2024}. Además, los resultados de casos particulares no bastan para demostrar que los beneficios se reproducirán en otras organizaciones ni que serán suficientes para compensar todos los costos.
 
-    \begin{enumerate}
-        \item La capacidad de \textbf{identificar} problemas no implica que la organización pueda \textbf{resolverlos} [F 1.1, F 1.2].
-        \item Las mejoras observadas son \textbf{locales} (un proceso, un caso) y no equivalen a desempeño organizacional integral. \textbf{[DISCUTIR]}
-        \item Una reducción de tiempos no demuestra que los beneficios compensen los costos y efectos derivados de la implementación. \textbf{[BUSCAR FUENTE]} ROI explícito.
-    \end{enumerate}
-
-    \textbf{[REVISAR TESIS]} Los casos exitosos podrían ser precisamente aquellos en que se cumplieron las condiciones organizacionales señaladas en los Argumentos 1 y 2, lo que reforzaría la tesis. Pero también podría haber sesgo de publicación (se publican más los éxitos). \textbf{[VERIFICAR]} Esto requiere argumentación cuidadosa, no una afirmación directa.
+    Por tanto, la capacidad diagnóstica y la capacidad transformadora deben distinguirse. La minería de procesos puede revelar oportunidades y apoyar intervenciones, pero sus efectos dependen de la calidad de los datos, los recursos, las capacidades organizacionales, la gestión del cambio y la consideración de las personas que ejecutan los procesos.
 
     \subsection{Discusión y relación entre los conceptos}
 
-    Los cuatro conceptos forman un sistema, no un conjunto de herramientas independientes:
+    Los conceptos analizados forman parte de una misma cadena organizacional. Los ERP y otros sistemas registran operaciones que pueden convertirse en \textit{event logs}; la minería de procesos analiza esos registros para describir el comportamiento observado e identificar problemas; la organización decide si interviene; y los resultados de la intervención pueden evaluarse en términos operativos y económicos. La calidad de los datos condiciona el análisis \cite{marin-castro2021preprocessing,eventloggeneration2026}, mientras que la preparación organizacional y la adopción condicionan el paso del análisis a la acción \cite{processminingmaturity2024,talo2025erp}.
 
-    \begin{table}[h]
-    \centering
-    \begin{tabular}{|p{0.25\linewidth}|p{0.30\linewidth}|p{0.33\linewidth}|}
-    \hline
-    \textbf{Nivel de análisis} & \textbf{Pregunta clave} & \textbf{Evidencia principal (provisional)} \\
-    \hline
-    Identificar ineficiencia & ¿La minería de procesos detecta cuellos de botella? & Sí, en los casos de mantenimiento minero y servicio público [F 4.1, F 4.2] \\
-    \hline
-    Mejorar un proceso & ¿El hallazgo se convierte en una intervención efectiva? & Depende de gestión del cambio, apoyo directivo, \textit{expertise} y recursos [F 1.1, F 1.2] \\
-    \hline
-    Mejorar el desempeño organizacional & ¿La mejora local se traduce en desempeño global? & Depende del ajuste organizacional, la calidad de datos, el contexto y el tiempo de uso [F 3.1] \\
-    \hline
-    Obtener ROI positivo & ¿Existe retorno económico verificable? & Puede haber ahorros, pero no es automático ni equivale a mejora integral \\
-    \hline
-    \end{tabular}
-    \end{table}
+    La dimensión humana atraviesa todas esas etapas. Los registros reflejan las actividades que las personas realizan dentro de los sistemas, y la interpretación de los hallazgos depende de los objetivos considerados. Por ello, la perspectiva orientada a metas ayuda a recordar que una mejora para un actor no necesariamente representa una mejora para todos los involucrados \cite{ghasemi2020eventlogs}.
 
-    Líneas de discusión abiertas:
+    El Kardex ofrece un ejemplo concreto de esta relación: sus movimientos pueden aportar datos para analizar inventarios, pero su utilidad depende de la exactitud del registro y de que la organización pueda actuar sobre lo que el análisis revela. Del mismo modo, una mejora de proceso solo puede considerarse rentable cuando los beneficios y costos se miden explícitamente; detectar una oportunidad no equivale a comprobar un ROI positivo.
 
-    \begin{itemize}
-        \item \textbf{Orientación a metas.} Una revisión sobre minería de procesos orientada a objetivos [F 1.3] sugiere que el valor del análisis depende de su vínculo con metas del negocio. Sin ese vínculo, el diagnóstico puede no tener impacto. \textbf{[CONECTAR]} Con el Argumento 3.
-        \item \textbf{Madurez.} ¿La "madurez tecnológica" de la tesis equivale a la madurez de minería de procesos descrita en [F 1.2]? \textbf{[PENDIENTE]}
-        \item \textbf{Implicaciones prácticas.} Si la herramienta es necesaria pero no suficiente, las organizaciones deberían evaluar su preparación (datos, capacitación, apoyo directivo, criterios de ROI) antes de invertir. \textbf{[DISCUTIR]} Evitar convertir esto en una recomendación categórica.
-        \item \textbf{Tensión no resuelta.} ¿Puede una organización con baja madurez beneficiarse igualmente de un proyecto piloto pequeño? \textbf{[BUSCAR FUENTE]}
-    \end{itemize}
+    En síntesis, la minería de procesos puede ser una condición habilitante para mejorar procesos, pero no una condición suficiente para garantizar el desempeño organizacional integral. Su valor depende de que la organización convierta datos confiables en análisis, análisis en decisiones y decisiones en intervenciones sostenibles, cuyos efectos se evalúen tanto para la operación como para las personas y los recursos invertidos.
 
     \section{Conclusión}
     \subsection{Síntesis de los argumentos principales}
 
-    Líneas posibles: (1) la calidad y representatividad de los datos condicionan la validez del diagnóstico; (2) los factores organizacionales y humanos condicionan que el diagnóstico se convierta en mejora; (3) la mejora de un proceso no equivale a rentabilidad demostrada.
+    El análisis permite sintetizar cuatro condiciones que median entre la adopción de minería de procesos y sus resultados. Primero, la calidad y representatividad de los \textit{event logs} condicionan la validez del diagnóstico \cite{marin-castro2021preprocessing,eventloggeneration2026}. Segundo, la preparación organizacional, el apoyo directivo, los recursos y la gestión del cambio influyen en que los hallazgos se conviertan en intervenciones sostenidas \cite{processminingmaturity2024,talo2025erp}. Tercero, la capacitación y las condiciones de quienes ejecutan los procesos deben considerarse al evaluar los resultados, aunque las fuentes analizadas no permiten atribuir a la minería de procesos efectos causales generales sobre el bienestar laboral. Por último, identificar una oportunidad de mejora no equivale a demostrar que se obtuvo un ROI positivo.
 
     \subsection{Respuesta a la tesis}
 
-    \textbf{[REVISAR TESIS]} Dependiendo de la lectura de las fuentes, la respuesta podría mantenerse como "no garantiza" o matizarse como "condición habilitante pero no suficiente". No cerrar hasta contrastar la evidencia.
+    La evidencia respalda de manera matizada la tesis: la minería de procesos puede hacer visibles desviaciones y oportunidades de mejora, pero su implementación por sí sola no garantiza un mejor desempeño organizacional integral. Los casos de mantenimiento minero y de prestación de servicios digitales muestran que el análisis puede contribuir a mejoras en procesos concretos cuando se acompaña de intervenciones \cite{miningindustry2023,digitalservice2024}. No contradicen la tesis; precisan que el impacto depende de la calidad de los datos, la capacidad de actuar sobre los hallazgos y la evaluación de los resultados obtenidos.
 
     \subsection{Reflexión final}
 
-    Líneas posibles: la distancia entre diagnosticar y transformar; el papel de los trabajadores en que una mejora tecnológica se sostenga; la necesidad de evaluar el retorno con criterios explícitos; límites del propio ensayo (fuentes en parte preprints, evidencia humana limitada). \textbf{[PENDIENTE]}
+    Para las organizaciones que consideran integrar minería de procesos con ERP y sistemas de inventario, el análisis sugiere atender tanto la calidad de los datos como la preparación de las personas y los procesos antes de interpretar los resultados. Los indicadores de eficiencia deben leerse junto con el contexto de trabajo y los objetivos de los actores involucrados; esa consideración es una implicación razonada del ensayo, no un efecto causal demostrado por las fuentes revisadas. Del mismo modo, la evaluación económica requiere definir costos, beneficios y periodos de medición, en lugar de inferir rentabilidad a partir de una oportunidad detectada.
+
+    Este ensayo tiene límites. Parte de la evidencia corresponde a estudios de caso o preprints, los resultados observados en procesos particulares no se generalizan automáticamente a todas las organizaciones y la bibliografía no aporta un cálculo directo del ROI de la minería de procesos. Tampoco se cuenta aquí con evidencia empírica suficiente para afirmar efectos causales sobre las condiciones laborales. Por ello, futuras mejoras del trabajo podrían incorporar estudios primarios sobre esos temas, verificar cada dato con las fuentes originales y comparar los costos de implementación con beneficios efectivamente medidos.
 
     \section{Referencias bibliográficas}
-
-    \begin{itemize}
-        \item \textbf{[F 1.1]} \textit{From Process Mining Insights to Process Improvement: All Talk and No Action?} Springer, 2023. https://doi.org/10.1007/978-3-031-46846-9\_15
-        \item \textbf{[F 1.2]} \textit{Improving Process Mining Maturity – From Intentions to Actions}. \textit{Business \& Information Systems Engineering}, 2024. https://doi.org/10.1007/s12599-024-00882-7
-        \item \textbf{[F 1.3]} Ghasemi, M., \& Amyot, D. (2020). From event logs to goals: A systematic literature review of goal-oriented process mining. \textit{Requirements Engineering, 25}, 67–93. https://doi.org/10.1007/s00766-018-00308-3
-        \item \textbf{[F 2.1]} Marin-Castro, H. M., \& Tello-Leal, E. (2021). Event log preprocessing for process mining: A review. \textit{Applied Sciences, 11}(22), 10556. https://doi.org/10.3390/app112210556
-        \item \textbf{[F 2.2]} \textit{Data-Related Challenges and Requirements for Event Log Generation in Process Mining: A Systematic Literature Review} (2026). arXiv:2609.04211. https://doi.org/10.48550/arXiv.2609.04211 \textit{(preprint)}
-        \item \textbf{[F 3.1]} \textit{The Impact of ERP Systems on Organizational Performance: The Role of Antecedents and Moderators}. \textit{International Journal of Enterprise Information Systems}, 2024. https://doi.org/10.4018/IJEIS.329960
-        \item \textbf{[F 3.2]} Ali, M., \& Miller, L. (2017). ERP system implementation in large enterprises: A systematic literature review. \textit{Journal of Enterprise Information Management, 30}(4), 666–692. https://doi.org/10.1108/JEIM-07-2014-0071
-        \item \textbf{[F 3.3]} Talo, M. C., \& Emanuel, A. W. R. (2025). Systematic review of enterprise resource planning (ERP) system implementation in organizations: Challenges and successes to company performance. \textit{Bitnet: Jurnal Pendidikan Teknologi Informasi, 10}(2), 1–11. https://doi.org/10.33084/bitnet.v10i2.9603
-        \item \textbf{[F 4.1]} \textit{Using Process Mining to Improve Digital Service Delivery} (2024). arXiv:2409.05869. https://doi.org/10.48550/arXiv.2409.05869 \textit{(preprint)}
-        \item \textbf{[F 4.2]} \textit{Towards the Application of Process Mining in the Mining Industry: An LHD Maintenance Process Optimization Case Study}. \textit{Sustainability, 15}(10), 7974, 2023. https://www.mdpi.com/2071-1050/15/10/7974
-        \item \textbf{[F 5.1]} \textit{An assessment of the effect of inventory control systems on performance of mining firms in Zimbabwe}. \textit{Cogent Business \& Management}, 2024. https://doi.org/10.1080/23311975.2023.2298535
-        \item \textbf{[F 5.2]} \textit{Enhancing Inventory Accuracy and Operational Performance with ERP}. \textit{Sinergi International Journal of Logistics, 2}(2), 1–14, 2024. https://doi.org/10.61194/sijl.v2i2.622
-    \end{itemize}
-
-    \textbf{Vacío pendiente:} fuentes empíricas sobre factores humanos (monitoreo, autonomía, carga de trabajo) en implementaciones de ERP y minería de procesos. Ver términos de búsqueda en 2.3.
-
-    \bibliographystyle{plainnat}
+    \bibliographystyle{apacite}
     \bibliography{referencias}
 
     \end{document}

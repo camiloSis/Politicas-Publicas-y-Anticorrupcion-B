@@ -1,0 +1,339 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Ali%
+\ \BBA {} Miller%
+}{%
+Ali%
+\ \BBA {} Miller%
+}{%
+{\protect \APACyear {2017}}%
+}]{%
+alimiller2017erp}
+\APACinsertmetastar {%
+alimiller2017erp}%
+\begin{APACrefauthors}%
+Ali, M.%
+\BCBT {}\ \BBA {} Miller, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{ERP} system implementation in large enterprises: A
+  systematic literature review} {{ERP} system implementation in large
+  enterprises: A systematic literature review}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Enterprise Information
+  Management}{30}{4}{666--692}.
+\newblock
+\begin{APACrefDOI} \doi{10.1108/JEIM-07-2014-0071} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Brock%
+\ \protect \BOthers {.}}{%
+Brock%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2024}}%
+}]{%
+processminingmaturity2024}
+\APACinsertmetastar {%
+processminingmaturity2024}%
+\begin{APACrefauthors}%
+Brock, J.%
+, Brennig, K.%
+, Lohr, B.%
+, Bartelheimer, C.%
+, von Enzberg, S.%
+\BCBL {}\ \BBA {} Dumitrescu, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2024}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Improving process mining maturity: From intentions to
+  actions} {Improving process mining maturity: From intentions to
+  actions}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Business \& Information Systems Engineering}{}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{10.1007/s12599-024-00882-7} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+El~Alaoui~Talibi%
+, Kosenkov%
+\BCBL {}\ \BBA {} Nikiforova%
+}{%
+El~Alaoui~Talibi%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2026}}%
+}]{%
+eventloggeneration2026}
+\APACinsertmetastar {%
+eventloggeneration2026}%
+\begin{APACrefauthors}%
+El~Alaoui~Talibi, G.%
+, Kosenkov, O.%
+\BCBL {}\ \BBA {} Nikiforova, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2026}{}{}.
+\newblock
+\APACrefbtitle {Data-related challenges and requirements for event log
+  generation in process mining: A systematic literature review.} {Data-related
+  challenges and requirements for event log generation in process mining: A
+  systematic literature review.}
+\newblock
+\APAChowpublished {arXiv preprint}.
+\newblock
+\begin{APACrefURL} \url{https://arxiv.org/abs/2609.04211} \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.48550/arXiv.2609.04211} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Ghasemi%
+\ \BBA {} Amyot%
+}{%
+Ghasemi%
+\ \BBA {} Amyot%
+}{%
+{\protect \APACyear {2020}}%
+}]{%
+ghasemi2020eventlogs}
+\APACinsertmetastar {%
+ghasemi2020eventlogs}%
+\begin{APACrefauthors}%
+Ghasemi, M.%
+\BCBT {}\ \BBA {} Amyot, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {From event logs to goals: A systematic literature review
+  of goal-oriented process mining} {From event logs to goals: A systematic
+  literature review of goal-oriented process mining}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Requirements Engineering}{25}{}{67--93}.
+\newblock
+\begin{APACrefDOI} \doi{10.1007/s00766-018-00308-3} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Marin-Castro%
+\ \BBA {} Tello-Leal%
+}{%
+Marin-Castro%
+\ \BBA {} Tello-Leal%
+}{%
+{\protect \APACyear {2021}}%
+}]{%
+marin-castro2021preprocessing}
+\APACinsertmetastar {%
+marin-castro2021preprocessing}%
+\begin{APACrefauthors}%
+Marin-Castro, H\BPBI M.%
+\BCBT {}\ \BBA {} Tello-Leal, E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2021}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Event log preprocessing for process mining: A review}
+  {Event log preprocessing for process mining: A review}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Applied Sciences}{11}{22}{10556}.
+\newblock
+\begin{APACrefDOI} \doi{10.3390/app112210556} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Mawonde%
+, Nyoni%
+, Mabwe%
+\BCBL {}\ \BBA {} Kamvumbi%
+}{%
+Mawonde%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2024}}%
+}]{%
+inventorycontrol2024}
+\APACinsertmetastar {%
+inventorycontrol2024}%
+\begin{APACrefauthors}%
+Mawonde, D.%
+, Nyoni, J.%
+, Mabwe, P.%
+\BCBL {}\ \BBA {} Kamvumbi, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2024}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {An assessment of the effect of inventory control systems
+  on performance of mining firms in {Zimbabwe}} {An assessment of the effect of
+  inventory control systems on performance of mining firms in
+  {Zimbabwe}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Cogent Business \& Management}{}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{10.1080/23311975.2023.2298535} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Nour%
+}{%
+Nour%
+}{%
+{\protect \APACyear {2024}}%
+}]{%
+erpimpact2024}
+\APACinsertmetastar {%
+erpimpact2024}%
+\begin{APACrefauthors}%
+Nour, M\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2024}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The impact of {ERP} systems on organizational
+  performance: The role of antecedents and moderators} {The impact of {ERP}
+  systems on organizational performance: The role of antecedents and
+  moderators}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{International Journal of Enterprise Information
+  Systems}{}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{10.4018/IJEIS.329960} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{Sinergi International Journal of Logistics}%
+}{%
+{Sinergi International Journal of Logistics}%
+}{%
+{\protect \APACyear {2024}}%
+}]{%
+inventoryerp2024}
+\APACinsertmetastar {%
+inventoryerp2024}%
+\begin{APACrefauthors}%
+{Sinergi International Journal of Logistics}.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2024}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Enhancing inventory accuracy and operational performance
+  with {ERP}} {Enhancing inventory accuracy and operational performance with
+  {ERP}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Sinergi International Journal of
+  Logistics}{2}{2}{1--14}.
+\newblock
+\begin{APACrefDOI} \doi{10.61194/sijl.v2i2.622} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Talo%
+\ \BBA {} Emanuel%
+}{%
+Talo%
+\ \BBA {} Emanuel%
+}{%
+{\protect \APACyear {2025}}%
+}]{%
+talo2025erp}
+\APACinsertmetastar {%
+talo2025erp}%
+\begin{APACrefauthors}%
+Talo, M\BPBI C.%
+\BCBT {}\ \BBA {} Emanuel, A\BPBI W\BPBI R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2025}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Systematic review of enterprise resource planning
+  ({ERP}) system implementation in organizations: Challenges and successes to
+  company performance} {Systematic review of enterprise resource planning
+  ({ERP}) system implementation in organizations: Challenges and successes to
+  company performance}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Bitnet: Jurnal Pendidikan Teknologi
+  Informasi}{10}{2}{1--11}.
+\newblock
+\begin{APACrefDOI} \doi{10.33084/bitnet.v10i2.9603} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Trottier%
+\ \protect \BOthers {.}}{%
+Trottier%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2024}}%
+}]{%
+digitalservice2024}
+\APACinsertmetastar {%
+digitalservice2024}%
+\begin{APACrefauthors}%
+Trottier, J.%
+, Van~Woensel, W.%
+, Wang, X.%
+, Mallur, K.%
+, El-Gharib, N.%
+\BCBL {}\ \BBA {} Amyot, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2024}{}{}.
+\newblock
+\APACrefbtitle {Using process mining to improve digital service delivery.}
+  {Using process mining to improve digital service delivery.}
+\newblock
+\APAChowpublished {arXiv preprint}.
+\newblock
+\begin{APACrefURL} \url{https://arxiv.org/abs/2409.05869} \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.48550/arXiv.2409.05869} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Velasquez%
+, Anani%
+, Munoz-Gama%
+\BCBL {}\ \BBA {} Pascual%
+}{%
+Velasquez%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2023}}%
+}]{%
+miningindustry2023}
+\APACinsertmetastar {%
+miningindustry2023}%
+\begin{APACrefauthors}%
+Velasquez, N.%
+, Anani, A.%
+, Munoz-Gama, J.%
+\BCBL {}\ \BBA {} Pascual, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2023}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Towards the application of process mining in the mining
+  industry: An {LHD} maintenance process optimization case study} {Towards the
+  application of process mining in the mining industry: An {LHD} maintenance
+  process optimization case study}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Sustainability}{15}{10}{7974}.
+\newblock
+\begin{APACrefDOI} \doi{10.3390/su15107974} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

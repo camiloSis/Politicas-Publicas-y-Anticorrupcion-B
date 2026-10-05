@@ -1,5 +1,56 @@
-[0] Config.pm:329> INFO - This is Biber 2.22
-[0] Config.pm:332> INFO - Logfile is 'main.blg'
-[57] biber:342> INFO - === lun oct  5, 2026, 11:45:32
-[204] Utils.pm:480> ERROR - Cannot find 'main.bcf'!
-[205] Biber.pm:137> INFO - ERRORS: 1
+This is BibTeX, Version 0.99e (TeX Live 2026)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: apacite.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: referencias.bib
+apacite.bst [2013/07/21 v6.03 APA bibliography style]
+You've used 11 entries,
+            6951 wiz_defined-function locations,
+            1342 strings with 13250 characters,
+and the built_in function-call counts, 23500 in all, are:
+= -- 2791
+> -- 195
+< -- 1276
++ -- 1305
+- -- 24
+* -- 1651
+:= -- 4660
+add.period$ -- 46
+call.type$ -- 11
+change.case$ -- 187
+chr.to.int$ -- 0
+cite$ -- 22
+duplicate$ -- 587
+empty$ -- 850
+format.name$ -- 346
+if$ -- 4225
+int.to.chr$ -- 0
+int.to.str$ -- 33
+missing$ -- 0
+newline$ -- 309
+num.names$ -- 88
+pop$ -- 381
+preamble$ -- 1
+purify$ -- 44
+quote$ -- 0
+skip$ -- 1336
+stack$ -- 0
+substring$ -- 1382
+swap$ -- 347
+text.length$ -- 23
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 880
+warning$ -- 0
+while$ -- 112
+width$ -- 0
+write$ -- 387
